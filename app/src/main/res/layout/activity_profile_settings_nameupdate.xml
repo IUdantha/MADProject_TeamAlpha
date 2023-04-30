@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/email_input4"
+        android:layout_width="336dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/text_box_background"
+        android:elevation="5dp"
+        android:hint="@string/edt_area_name"
+        android:inputType="textEmailAddress"
+        android:padding="16dp"
+        android:textColorHint="#8A000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="412dp"
+        android:layout_height="108dp"
+        android:background="@color/nav_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="284dp"
+        android:layout_height="34dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/edt_name"
+        android:textAlignment="viewStart"
+        android:textColor="@color/description_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="284dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="85dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/ent_name"
+        android:textAlignment="viewStart"
+        android:textColor="@color/description_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="284dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/settings_heading"
+        android:textAlignment="viewStart"
+        android:textColor="@color/nevy_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:contentDescription="@string/notification_btn"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bell" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="147dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/btn_box_background"
+        android:elevation="5dp"
+        android:padding="16dp"
+        android:text="@string/Save_btn"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button11"
+        app:layout_constraintTop_toBottomOf="@+id/email_input4" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="147dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/btn_outline"
+        android:elevation="5dp"
+        android:padding="16dp"
+        android:text="@string/Cancel_btn"
+        android:textAllCaps="true"
+        android:textColor="@color/btn_color"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_input4" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="415dp"
+        android:layout_height="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/navbar_temp_4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

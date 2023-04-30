@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edit">9dp</dimen>
+    <dimen name="added_job">9dp</dimen>
+    <dimen name="btnText">15sp</dimen>
+    <dimen name="hding">20sp</dimen>
+    <dimen name="norText">14sp</dimen>
+    <dimen name="subHding">14sp</dimen>
+    <dimen name="iText">14sp</dimen>
+    <dimen name="profileMarginStart">109dp</dimen>
+    <dimen name="profileMarginTop">7dp</dimen>
+    <dimen name="profileMarginEnd">126dp</dimen>
+    <dimen name="BtnMargin">28dp</dimen>
+    <dimen name="TextSize">153dp</dimen>
+    <dimen name="btnMarginB">28dp</dimen>
+    <dimen name="textBoxMarginStart">47dp</dimen>
+    <dimen name="textBoxMarginEnd">50dp</dimen>
+    <dimen name="elevation">10dp</dimen>
+    <dimen name="btnCorner">9dp</dimen>
+</resources>
+
+
+

@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">Candidate_Account_UIs</string>
+
+    <!--    Sign in-->
+    <string name="sign_in_btn">Sign In</string>
+    <string name="alt_sign_in">-Or sign in with-</string>
+
+    <string name="dont_acc">I don\'t have an Account! Sign up</string>
+
+    <!--    Sign up-->
+    <string name="create_account_heading">Create your account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="con_password">Confirm Password</string>
+    <string name="looking_job_btn">I am\nLooking for\nJob</string>
+    <string name="offering_job_btn">I am\nOffering\nJobs</string>
+    <string name="sign_up_btn">Sign up</string>
+    <string name="alt_sign_up">-Or sign up with-</string>
+    <string name="google_sign_up">Google sign up</string>
+    <string name="facebook_sign_up">Facebook sign up</string>
+    <string name="already_acc">Already have an account? Sign in</string>
+
+    <!--    Nav bar -->
+    <string name="title_home">Home</string>
+    <string name="title_jobs">Jobs</string>
+    <string name="title_fav">Favorite</string>
+    <string name="title_account">Account</string>
+
+    <!--    Trending Jobs & selected job description-->
+    <string name="t_jobs">Trending Jobs</string>
+    <string name="search">Search</string>
+    <string name="job_title">Software Engineer</string>
+    <string name="job_company">LBS Company (PVT) Ltd</string>
+    <string name="job_description">We are seeking an experienced C# Game Server Development
+        Engineer.The candidate must have experience in developing game servers.</string>
+    <string name="notification_btn">notification_btn</string>
+    <string name="job_apply_btn">Apply</string>
+    <string name="more_description_text">"We are seeking an experienced C# Game
+        Server Development Engineer relevant experience. The candidate must have experience
+        in developing game servers for multiple game projects, especially being familiar with KCP protocol.
+        Job Requirements: Curating content for the company's social media accounts.experience in C# game server development,
+        with experience in multiple game projects preferred, and MUST be familiar with KCP protocol. Familiar with
+        component-based development mode (non-inheritance mode) and object-oriented programming concepts.  "</string>
+    <string name="cal_avg_sal">Calculate Average Salary</string>
+
+    <!--    Profile-settings-->
+    <string name="settings_heading">Settings</string>
+    <string name="name">Name\nIsuru Udantha</string>
+    <string name="status">Status\nSoftware Engineer</string>
+    <string name="Email">Email\nisuru.u@gmail.com</string>
+    <string name="chg_password">Change Password</string>
+    <string name="dlt_account">Delete My Account</string>
+
+    <!--    Profile-Settings-NameUpdate-->
+    <string name="edt_name">Edit Name</string>
+    <string name="ent_name">Enter New Name</string>
+    <string name="Save_btn">Save</string>
+    <string name="Cancel_btn">Cancel</string>
+    <string name="edt_area_name">New Name</string>
+
+    <!--    Profile-Settings-statusupdate-->
+    <string name="edt_status">Edit Status</string>
+    <string name="ent_status">Enter New Status</string>
+    <string name="edt_area_status">New Status</string>
+
+    <!--    Profile-Settings-email-->
+    <string name="edt_email">Edit Email</string>
+    <string name="ent_email">Enter New Email</string>
+    <string name="edt_area_email">New Email</string>
+
+    <!-- Profile-Settings-PasswordUpdate-->
+    <string name="edt_password">Change Password</string>
+    <string name="ent_old_pass">Enter Old Password</string>
+    <string name="ent_new_pass">Enter New Password</string>
+    <string name="ent_new_cnf_pass">Re-Enter New Password</string>
+
+
+    <!--    Success message-->
+    <string name="succ_meg">Update Successfully</string>
+    <string name="ok_btn">OK</string>
+
+    <!--    Delete message-->
+    <string name="delete_message">Are you sure want to delete your whole account? You\'ll lose everything.
+        Everything you\'re ever posted will be gone forever.\n\nIf you\'re sure, confirm by logging in below.</string>
+    <string name="ent_username">Enter Username</string>
+    <string name="ent_password">Enter Password</string>
+    <string name="conf_btn">Confirm</string>
+    <string name="signInHeading">Login to your Account</string>
+    <string name="resetPassword">Don\'t remenber Password? Reset now</string>
+    <string name="resetPasswordHeading">Reset Password</string>
+    <string name="submitBtn">Submit</string>
+    <string name="resetPasswordDesc">Enter the email you are currently use. We\'ll send reset password details though the Email.</string>
+    <string name="backToLogin">Back to Sign in</string>
+
+
+    <!--    Facebook-->
+
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+
+
+</resources>

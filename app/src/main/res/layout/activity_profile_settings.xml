@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="415dp"
+        android:layout_height="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/navbar_temp_4" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="412dp"
+        android:layout_height="108dp"
+        android:background="@color/nav_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="284dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/settings_heading"
+        android:textAlignment="viewStart"
+        android:textColor="@color/nevy_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:contentDescription="@string/notification_btn"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bell" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="151dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:srcCompat="@drawable/pro_pic" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="128dp"
+        android:background="@null"
+        android:contentDescription="@string/notification_btn"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/edt_profile_pencil" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="338dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_settings"
+        android:fontFamily="@font/inter_medium"
+        android:paddingLeft="20dp"
+        android:text="@string/name"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/description_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="338dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_settings"
+        android:fontFamily="@font/inter_medium"
+        android:paddingLeft="20dp"
+        android:text="@string/status"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/description_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="338dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_settings"
+        android:fontFamily="@font/inter_medium"
+        android:paddingLeft="20dp"
+        android:text="@string/Email"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/description_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="338dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_settings"
+        android:fontFamily="@font/inter_medium"
+        android:paddingLeft="20dp"
+        android:text="@string/chg_password"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/description_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="338dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_settings"
+        android:fontFamily="@font/inter_medium"
+        android:paddingLeft="20dp"
+        android:text="@string/dlt_account"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/description_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
