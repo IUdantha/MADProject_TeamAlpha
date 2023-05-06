@@ -1,4 +1,4 @@
-package com.example.candidate_account_uis
+package com.example.candidate_account_uis.candidateActivities
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -8,13 +8,17 @@ import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.databinding.ActivitySignUpBinding
+import com.example.candidate_account_uis.firebase.FirestoreClass
+import com.example.candidate_account_uis.model.User
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 
 class SignUpActivity : AppCompatActivity() {
@@ -54,6 +58,19 @@ class SignUpActivity : AppCompatActivity() {
                         firebaseAuth.createUserWithEmailAndPassword(email, pass)
                             .addOnCompleteListener {
                                 if (it.isSuccessful) {
+
+                                    // Firebase registered user
+                                    val firebaseUser: FirebaseUser = it.result!!.user!!
+                                    // Registered Email
+                                    val registeredEmail = firebaseUser.email!!
+
+                                    val user = User(
+                                        firebaseUser.uid, registeredEmail
+                                    )
+
+                                    // call the registerUser function of FirestoreClass to make an entry in the database.
+                                    FirestoreClass().registerUser(this@SignUpActivity, user)
+
                                     val intent = Intent(this, SignInActivity::class.java)
                                     startActivity(intent)
                                 } else {
@@ -119,6 +136,18 @@ class SignUpActivity : AppCompatActivity() {
         val credential = GoogleAuthProvider.getCredential(account.idToken, null)
         auth.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful) {
+                // Firebase registered user
+                val firebaseUser: FirebaseUser = it.result!!.user!!
+                // Registered Email
+                val registeredEmail = account.email
+
+                val user = User(
+                    firebaseUser.uid, registeredEmail!!
+                )
+
+                // call the registerUser function of FirestoreClass to make an entry in the database.
+                FirestoreClass().registerUser(this@SignUpActivity, user)
+
                 val intent: Intent = Intent(this, TrendingJobsActivity::class.java)
                 intent.putExtra("email", account.email)
                 intent.putExtra("name", account.displayName)
@@ -128,6 +157,27 @@ class SignUpActivity : AppCompatActivity() {
 
             }
         }
+    }
+
+    //temporary code paste
+    fun userRegisteredSuccess() {
+
+        Toast.makeText(
+            this@SignUpActivity,
+            "You have successfully registered.",
+            Toast.LENGTH_SHORT
+        ).show()
+
+        // Hide the progress dialog
+//        hideProgressDialog()
+
+        /**
+         * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
+         * and send him to Intro Screen for Sign-In
+         */
+        FirebaseAuth.getInstance().signOut()
+        // Finish the Sign-Up Screen
+        finish()
     }
 
 }
