@@ -17,6 +17,26 @@
     <dimen name="textBoxMarginEnd">50dp</dimen>
     <dimen name="elevation">10dp</dimen>
     <dimen name="btnCorner">9dp</dimen>
+
+
+    <!-- ===================== Sarindu  ===================== -->
+
+    <dimen name="textbox1">15sp</dimen>
+    <dimen name="button1">15sp</dimen>
+    <dimen name="title_text">21sp</dimen>
+    <dimen name="button_save">15sp</dimen>
+    <dimen name="text_para">15sp</dimen>
+    <dimen name="button_cal">15sp</dimen>
+    <dimen name="text_calculater_value">43sp</dimen>
+    <dimen name="cal_text">15sp</dimen>
+    <dimen name="cal_textbox">15sp</dimen>
+    <dimen name="apply_button_fav">15sp</dimen>
+    <dimen name="remove_button_fav">15sp</dimen>
+    <dimen name="searchbar_fav">15sp</dimen>
+    <dimen name="experiences_text">23sp</dimen>
+    <dimen name="education_text">23sp</dimen>
+    <dimen name="skills_text">23sp</dimen>
+
 </resources>
 
 
