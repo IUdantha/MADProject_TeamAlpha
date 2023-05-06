@@ -1,4 +1,4 @@
-package com.example.candidate_account_uis
+package com.example.candidate_account_uis.candidateActivities
 
 import android.app.Activity
 import android.content.Intent
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
+import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.databinding.ActivitySignInBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 
 
-class SignInActivity : AppCompatActivity() {
+class SignInActivity : BaseActivity() {
 
     //    normal authentication
     private lateinit var binding: ActivitySignInBinding

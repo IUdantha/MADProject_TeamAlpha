@@ -1,7 +1,8 @@
-package com.example.candidate_account_uis
+package com.example.candidate_account_uis.candidateActivities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.candidate_account_uis.R
 
 class SuccessMessageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
