@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".company.CompanySuccessfulMessageActivity">
+
+
+    <View
+        android:id="@+id/upNav"
+        android:layout_width="410dp"
+        android:layout_height="110dp"
+        android:background="#E3E3FE"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/bottomNav"
+        android:layout_width="410dp"
+        android:layout_height="81dp"
+        android:background="#E3E3FE"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="@string/setting"
+        android:textColor="#041051"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/upNav"
+        app:layout_constraintEnd_toEndOf="@+id/upNav"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="@+id/upNav"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.361" />
+
+
+    <TextView
+        android:id="@+id/updateSuccess"
+        android:layout_width="313dp"
+        android:layout_height="276dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="176dp"
+        android:background="@drawable/rec_stroke"
+        android:paddingTop="150dp"
+        android:text="@string/com_updated_successfully"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNav"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="34dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/vector55"
+        android:contentDescription="@string/HomeIcon" />
+
+    <ImageView
+        android:id="@+id/FormIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/bottomNav"
+        app:srcCompat="@drawable/vector"
+        android:contentDescription="@string/FormIcon"/>
+
+
+    <ImageView
+        android:id="@+id/bellIcon"
+        android:layout_width="24dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="216dp"
+        app:layout_constraintBottom_toBottomOf="@+id/upNav"
+        app:layout_constraintStart_toEndOf="@+id/Heading"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442"
+        app:srcCompat="@drawable/bell"
+        android:contentDescription="@string/BellIcon"/>
+
+    <ImageView
+        android:id="@+id/ProfileIcon"
+        android:layout_width="38dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rectangle_8_shape"
+        android:contentDescription="@string/ProfileIcon"
+        android:padding="7dp"
+        android:src="@drawable/vector_ek6"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintStart_toStartOf="@+id/bottomNav" />
+
+    <ImageView
+        android:id="@+id/correctIcon"
+        android:layout_width="115dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="44dp"
+        android:contentDescription="@string/correct"
+        android:src="@drawable/check"
+        android:translationZ="6dp"
+        app:layout_constraintEnd_toEndOf="@+id/updateSuccess"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/updateSuccess"
+        app:layout_constraintTop_toTopOf="@+id/updateSuccess"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="#00007F"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/updateSuccess"
+        app:layout_constraintEnd_toEndOf="@+id/updateSuccess"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/updateSuccess" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

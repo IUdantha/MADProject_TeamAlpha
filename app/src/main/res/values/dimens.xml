@@ -17,6 +17,19 @@
     <dimen name="textBoxMarginEnd">50dp</dimen>
     <dimen name="elevation">10dp</dimen>
     <dimen name="btnCorner">9dp</dimen>
+
+<!--Azmarah-->
+    <dimen name="buttonText">14sp</dimen>
+    <dimen name="Heading">20sp</dimen>
+    <dimen name="normalText">14sp</dimen>
+    <dimen name="subHeading">14sp</dimen>
+    <dimen name="InputText">14sp</dimen>
+    <dimen name="proStartMargin">109dp</dimen>
+    <dimen name="proMarginTop">7dp</dimen>
+    <dimen name="proMarginEnd">123dp</dimen>
+    <dimen name="IconMarginB">28dp</dimen>
+    <dimen name="recPaddingT">150dp</dimen>
+    <dimen name="btnCornerRadius">8dp</dimen>
 </resources>
 
 

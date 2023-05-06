@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#E0DEDE"
+    tools:context=".company.CompanyProfile">
+
+    <View
+        android:id="@+id/upNav"
+        android:layout_width="410dp"
+        android:layout_height="110dp"
+        android:background="#E3E3FE"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/bottomNav"
+        android:layout_width="410dp"
+        android:layout_height="81dp"
+        android:background="#E3E3FE"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="@string/heading"
+        android:textColor="#041051"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/upNav"
+        app:layout_constraintEnd_toEndOf="@+id/upNav"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintStart_toStartOf="@+id/upNav"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506" />
+
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="34dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/HomeIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/vector55" />
+
+    <ImageView
+        android:id="@+id/FormIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/FormIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/bottomNav"
+        app:srcCompat="@drawable/vector" />
+
+    <ImageView
+        android:id="@+id/bellIcon"
+        android:layout_width="24dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="27dp"
+        android:contentDescription="@string/BellIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/upNav"
+        app:layout_constraintStart_toEndOf="@+id/Heading"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442"
+        app:srcCompat="@drawable/bell" />
+
+
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNav"
+        app:srcCompat="@drawable/vector11" />
+
+
+    <!--    <TextView-->
+<!--        android:id="@+id/profile"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="59dp"-->
+<!--        android:layout_marginTop="148dp"-->
+<!--        android:paddingTop="5dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:text="@string/profile"-->
+<!--        android:textAlignment="center"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.492"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/upNav"-->
+<!--        tools:ignore="TextSizeCheck" />-->
+
+    <ImageView
+        android:id="@+id/editPencil"
+        android:layout_width="18dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="117dp"
+
+        android:contentDescription="@string/EditPencil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNav"
+        app:srcCompat="@drawable/pencil" />
+
+    <ImageView
+        android:id="@+id/ProfileIcon"
+        android:layout_width="38dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rectangle_8_shape"
+        android:contentDescription="@string/ProfileIcon"
+        android:padding="7dp"
+        android:src="@drawable/vector_ek6"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="@+id/bottomNav" />
+
+    <ImageView
+        android:id="@+id/logoIcon"
+        android:layout_width="133dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="36dp"
+
+        android:contentDescription="@string/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNav"
+        app:srcCompat="@drawable/logobg" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/com_user_profile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoIcon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

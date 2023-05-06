@@ -14,5 +14,15 @@
     <color name="search_box_color">#F3F3F3</color>
     <color name="description_text">#808080</color>
 
+<!--    Azmarah -->
+    <color name="nav">#FFE2E2FD</color>
+    <color name="bg">#FEFEFE</color>
+    <color name="Heading">#1F0038</color>
+    <color name="view">#7F7F7F</color>
+    <color name="icon_bg">#000080</color>
+
+    <color name="confirm">#FF59242E</color>
+    <color name="rec">#E0DEDE</color>
+
 
 </resources>

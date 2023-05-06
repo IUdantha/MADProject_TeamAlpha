@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".company.CompanyDetailForm">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="103dp"
+        android:text="@string/company_details_form"
+        android:textColor="#071B43"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtComName"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="24dp"
+        android:autofillHints=""
+        android:background="@drawable/rectangle_companyprofile"
+        android:elevation="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:shadowColor="#201C1C"
+        android:hint="@string/company_name"
+        app:layout_constraintBottom_toTopOf="@+id/edtComContact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="LabelFor,RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/edtComContact"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/contact_no"
+        android:elevation="5dp"
+        android:paddingStart="12dp"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/edtComEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints=""
+        android:background="@drawable/rectangle_companyprofile"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/edtComEmail"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:elevation="5dp"
+        android:inputType="textEmailAddress"
+        android:paddingStart="12dp"
+        android:textColor="#B9B9B9"
+        app:layout_constraintBottom_toTopOf="@+id/edtComDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints=""
+        android:background="@drawable/rectangle_companyprofile"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/edtComDescription"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="76dp"
+        android:autofillHints=""
+        android:background="@drawable/rectangle_companyprofile"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:hint="@string/description"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnComAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/btnComAdd"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="116dp"
+        android:backgroundTint="#00007F"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

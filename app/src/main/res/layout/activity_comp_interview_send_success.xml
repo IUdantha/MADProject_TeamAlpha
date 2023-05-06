@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".company.CompInterviewSendSuccessActivity">
+
+
+    <View
+        android:id="@+id/upNav"
+        android:layout_width="410dp"
+        android:layout_height="110dp"
+        android:background="#E3E3FE"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--android:elevation="10dp"-->
+
+    <View
+        android:id="@+id/bottomNav"
+        android:layout_width="410dp"
+        android:layout_height="81dp"
+        android:background="#E3E3FE"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="@string/udeshani_s"
+        android:textColor="#041051"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/upNav"
+        app:layout_constraintEnd_toEndOf="@+id/upNav"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="@+id/upNav"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.361" />
+
+
+    <TextView
+        android:id="@+id/subHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/com_software_engineer"
+        android:textColor="#041051"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="@+id/upNav"
+        app:layout_constraintTop_toBottomOf="@+id/Heading" />
+
+    <TextView
+        android:id="@+id/updateSuccess"
+        android:layout_width="313dp"
+        android:layout_height="276dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="176dp"
+        android:background="@drawable/rec_stroke"
+        android:paddingTop="150dp"
+        android:text="@string/message"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNav"
+        tools:ignore="TextSizeCheck"
+        />
+
+    <ImageView
+        android:id="@+id/correctIcon"
+        android:layout_width="110dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="44dp"
+        android:contentDescription="@string/correct"
+        android:translationZ="5dp"
+        android:src="@drawable/check"
+        app:layout_constraintEnd_toEndOf="@+id/updateSuccess"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/updateSuccess"
+        app:layout_constraintTop_toTopOf="@+id/updateSuccess"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/btnMarginB"
+        android:backgroundTint="#00007F"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/updateSuccess"
+        app:layout_constraintEnd_toEndOf="@+id/updateSuccess"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/updateSuccess" />
+
+
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rectangle_8_shape"
+        android:contentDescription="@string/HomeIcon"
+        android:padding="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/vector_ek3" />
+
+
+    <ImageView
+        android:id="@+id/FormIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="@string/FormIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="@+id/bottomNav"
+        app:srcCompat="@drawable/vector" />
+
+    <ImageView
+        android:id="@+id/ProfileIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="@string/ProfileIcon"
+        android:src="@drawable/vector_ek2"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="@+id/bottomNav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".company.CompanyEditProfileActivity">
+
+
+    <View
+        android:id="@+id/upNav"
+        android:layout_width="410dp"
+        android:layout_height="110dp"
+        android:background="#E3E3FE"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bottomNav"
+        android:layout_width="410dp"
+        android:layout_height="81dp"
+        android:background="#E3E3FE"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="@string/settings"
+        android:textColor="#041051"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/upNav"
+        app:layout_constraintEnd_toEndOf="@+id/upNav"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="@+id/upNav"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.361" />
+
+    <TextView
+        android:id="@+id/subHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/edit_profile"
+        android:textColor="#041051"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="@+id/upNav"
+        app:layout_constraintTop_toBottomOf="@+id/Heading" />
+
+    <EditText
+        android:id="@+id/comName"
+        android:layout_width="316dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="242dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:text="@string/t_company"
+        android:elevation="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="LabelFor,RtlSymmetry,TextSizeCheck"
+        android:autofillHints=""
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="14sp"
+        android:paddingStart="12dp"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="316dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:paddingStart="12dp"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="396dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:text="@string/t_email"
+        android:elevation="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints=""
+        tools:ignore="LabelFor,RtlSymmetry"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="14sp"/>
+
+    <EditText
+
+        android:id="@+id/phone"
+        android:layout_width="316dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:paddingStart="12dp"
+        android:inputType="phone"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="332dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:text="@string/t_phone"
+        android:elevation="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="LabelFor,RtlSymmetry,TextSizeCheck"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="14sp"
+        android:autofillHints=""/>
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="316dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:paddingStart="12dp"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="487dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="14sp"
+        android:text="@string/t_description"
+        android:elevation="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/cancelButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints=""
+        tools:ignore="LabelFor,RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="34dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/vector55"
+        android:contentDescription="@string/HomeIcon" />
+
+
+    <ImageView
+        android:id="@+id/FormIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/bottomNav"
+        app:srcCompat="@drawable/vector"
+        android:contentDescription="@string/FormIcon" />
+
+    <ImageView
+        android:id="@+id/bellIcon"
+        android:layout_width="24dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="216dp"
+        app:layout_constraintBottom_toBottomOf="@+id/upNav"
+        app:layout_constraintStart_toEndOf="@+id/Heading"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442"
+        app:srcCompat="@drawable/bell"
+        android:contentDescription="@string/BellIcon" />
+
+    <ImageView
+        android:id="@+id/ProfileIcon"
+        android:layout_width="38dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rectangle_8_shape"
+        android:padding="7dp"
+        android:src="@drawable/vector_ek6"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintStart_toStartOf="@+id/bottomNav"
+        android:contentDescription="@string/ProfileIcon" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="146dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/newlogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNav" />
+
+
+    <ImageView
+        android:id="@+id/editPencil"
+        android:layout_width="18dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="120dp"
+        android:contentDescription="@string/EditPencil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNav"
+        app:srcCompat="@drawable/pencil"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="@string/cancel"
+        android:textColor="#000075"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#00007F"
+        app:strokeWidth="2dp"
+        app:cornerRadius="8dp"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="132dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#00007F"
+        android:text="@string/save"
+        android:textColor="#fff"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintStart_toEndOf="@+id/cancelButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

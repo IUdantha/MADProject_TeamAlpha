@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".company.CompanyChangePwActivity">
+
+    <View
+        android:id="@+id/upNav"
+        android:layout_width="410dp"
+        android:layout_height="110dp"
+        android:background="#E3E3FE"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/bottomNav"
+        android:layout_width="410dp"
+        android:layout_height="81dp"
+        android:background="#E3E3FE"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="@string/setting"
+        android:textColor="#041051"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/upNav"
+        app:layout_constraintEnd_toEndOf="@+id/upNav"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="@+id/upNav"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.361" />
+
+    <TextView
+        android:id="@+id/subHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_password"
+        android:textColor="#041051"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="@+id/upNav"
+        app:layout_constraintTop_toBottomOf="@+id/Heading" />
+
+    <TextView
+        android:id="@+id/OldPassword"
+        android:layout_width="295dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/enter_old_password"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/editoldPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/NewPassword"
+        android:layout_width="306dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="9dp"
+        android:text="@string/enter_new_password"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/editnewPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck,TextSizeCheck" />
+
+
+    <TextView
+        android:id="@+id/RnewPassword"
+        android:layout_width="291dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/re_enter_new_password"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/editrnewPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/editrnewPassword"
+        android:layout_width="314dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:elevation="5dp"
+        android:inputType="textPassword"
+        android:hint="@string/t_tre_enter_new_password"
+        android:paddingStart="12dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/cancelButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/editoldPassword"
+        android:layout_width="317dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:hint="@string/t_tenter_old_password"
+        android:elevation="5dp"
+        android:paddingStart="12dp"
+        android:textSize="14sp"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/NewPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/editnewPassword"
+        android:layout_width="318dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:elevation="5dp"
+        android:inputType="textPassword"
+        android:hint="@string/t_tenter_new_password"
+        android:paddingStart="12dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/RnewPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="34dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/vector55"
+        android:contentDescription="@string/HomeIcon" />
+
+    <ImageView
+        android:id="@+id/FormIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/bottomNav"
+        app:srcCompat="@drawable/vector"
+        android:contentDescription="@string/FormIcon"/>
+
+
+    <ImageView
+        android:id="@+id/bellIcon"
+        android:layout_width="25dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="216dp"
+        android:contentDescription="@string/BellIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/upNav"
+        app:layout_constraintStart_toEndOf="@+id/Heading"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442"
+        app:srcCompat="@drawable/bell" />
+
+
+    <ImageView
+        android:id="@+id/ProfileIcon"
+        android:layout_width="38dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rectangle_8_shape"
+        android:contentDescription="@string/ProfileIcon"
+        android:padding="7dp"
+        android:src="@drawable/vector_ek6"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintStart_toStartOf="@+id/bottomNav" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="@string/cancel"
+        app:cornerRadius="8dp"
+        android:textColor="#000075"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#00007F"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="132dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#00007F"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintStart_toEndOf="@+id/cancelButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

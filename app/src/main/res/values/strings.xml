@@ -100,4 +100,88 @@
     <string name="facebook_client_token">56789</string>
 
 
+<!-- Azmarah -->
+
+    <!-- Company Side_Profile Strings-->
+    <!--activity_company_edit_profile -->
+    <string name="changepassword">Change Password</string>
+    <string name="deleteaccountbutton">Delete My Account</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="settings">Settings</string>
+    <string name="t_company">NNC Technologies (PVT) Ltd</string>
+    <string name="t_phone">+94 81 2123 125</string>
+    <string name="t_email">nnc@abc.com</string>
+    <string name="t_description">Reputed Company</string>
+    <string name="HomeIcon">Home</string>
+    <string name="FormIcon">Form</string>
+    <string name="BellIcon">Bell</string>
+    <string name="EditPencil">Edit</string>
+    <string name="ProfileIcon">Profile</string>
+    <string name="logo">Logo</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <!--activity_company_detail_form-->
+    <string name="company_details_form">Company Details Form</string>
+    <string name="company_name">Company Name</string>
+    <string name="contact_no">Contact No</string>
+    <string name="description">Description</string>
+    <string name="submit">Submit</string>
+
+    <!--Company_editProfile-->
+    <string name="heading">Good Morning NNC Technologies</string>
+    <string name="t_emailC">Email</string>
+    <string name="t_comName">Company Name</string>
+    <string name="t_tdescription">Description</string>
+
+    <!--CompanyProfile_Settings-->
+    <string name="profile">NNC Technologies (PVT) Ltd\nnnc@abc.com\n+94 81 2123 125</string>
+    <string name="settings1">Settings</string>
+    <string name="t_tchange_password">Change Password</string>
+    <string name="t_tupdate_my_profile">Update My Profile</string>
+    <string name="t_tdelete_my_account">Delete My Account</string>
+
+    <!-- Company_Change_PW-->
+    <string name="change_password">Change Password</string>
+    <string name="enter_old_password">Enter Old Password</string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="re_enter_new_password">Re-Enter New Password</string>
+    <string name="t_tenter_old_password">Enter old password</string>
+    <string name="t_tre_enter_new_password">Re-Enter New password</string>
+    <string name="t_tenter_new_password">Enter new password</string>
+
+    <!--company_delete_account-->
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="detail">Are you sure want to delete your whole account? You\'ll lose everything. Everything you\'re ever posted will be gone forever. \n\nIf you\'re sure, confirm by logging in below.</string>
+    <string name="confirm">CONFIRM</string>
+
+    <!--company_successful_message-->
+    <string name="com_updated_successfully">Updated Successfully</string>
+    <string name="correct">Correct</string>
+    <string name="setting">Settings</string>
+
+    <!--candidate_resume_download-->
+    <string name="udeshani_s">Udeshani S.</string>
+    <string name="com_software_engineer">Software Engineer</string>
+    <string name="t_tenter_interview_time">Enter Interview Time</string>
+    <string name="t_tenter_note">Enter Note</string>
+    <string name="t_tenter_interview_date">Enter Interview Date</string>
+    <string name="send">Send</string>
+
+    <!--company_interview-->
+    <string name="full_name">Full Name \t\t\t: \t\tUdeshani Senevirathna</string>
+    <string name="university">University \t\t\t: \t\tSLIIT</string>
+    <string name="email_t">Email \t\t\t\t\t\t: \t\tudeshaniS@gmail.com</string>
+    <string name="uid">UID Number \t: \t\tIT20763189</string>
+    <string name="nic">NIC Number \t: \t\t32679031v</string>
+    <string name="contact">Contact No \t\t: \t\t071-4589036</string>
+    <string name="profilePic">Profile Picture</string>
+    <string name="download">Download Resume</string>
+    <string name="send_interview_request">Send Interview Request</string>
+
+    <!--company_interview_send_success-->
+    <string name="message">Message sent successfully</string>
+    <string name="ok">OK</string>
 </resources>

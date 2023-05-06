@@ -62,6 +62,68 @@
         </activity>
 
 
+    <!--Azmarah-->
+
+        <activity
+            android:name=".company.CompanyEditProfileActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".company.ComCandidateResumeDownloadActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".company.CompanyChangePwActivity"
+            android:exported="true">
+        </activity>
+
+
+        <activity
+            android:name=".company.CompanyDeleteAccountActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".company.CompanyDetailForm"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".company.CompanyInterviewActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".company.CompanyProfile"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".company.CompanyProfileSettings"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".company.CompanySuccessfulMessageActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".company.CompInterviewSendSuccessActivity"
+            android:exported="true">
+        </activity>
+
     </application>
 
 
