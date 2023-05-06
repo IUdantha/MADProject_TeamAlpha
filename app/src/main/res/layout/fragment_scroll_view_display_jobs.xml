@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".FavouritesFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="117dp"
+            android:layout_marginEnd="136dp"
+            android:text="Job Vacancies"
+            android:textColor="#0C0000"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/group_3"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="51dp"
+            android:background="@drawable/textbox"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+
+            <TextView
+                android:id="@+id/d1"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="56dp"
+                android:text="We are seeking an experienced C# Game Server Development Engineer.The candidate must have experience in developing game servers."
+                android:textColor="@color/text_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/software_engineer"
+                android:layout_width="wrap_content"
+                android:layout_height="39.5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:text="Software Engineer"
+                android:textColor="@color/text_color"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/apply"
+                android:layout_width="89dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="221dp"
+                android:layout_marginTop="126dp"
+                android:backgroundTint="@color/button_color_blue"
+                android:gravity="center"
+                android:text="@string/apply_string"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/remove"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="126dp"
+                android:backgroundTint="@color/button_color_red"
+                android:gravity="center"
+                android:text="Remove"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/group_31"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="51dp"
+            android:background="@drawable/textbox"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group_3">
+
+
+            <TextView
+                android:id="@+id/d11"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="56dp"
+                android:text="We are seeking an experienced C# Game Server Development Engineer.The candidate must have experience in developing game servers."
+                android:textColor="@color/text_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/software_engineer1"
+                android:layout_width="wrap_content"
+                android:layout_height="39.5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/Network_Engineer"
+                android:textColor="@color/text_color"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/apply1"
+                android:layout_width="89dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="221dp"
+                android:layout_marginTop="126dp"
+                android:backgroundTint="@color/button_color_blue"
+                android:gravity="center"
+                android:text="@string/apply_string"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/remove1"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="126dp"
+                android:backgroundTint="@color/button_color_red"
+                android:gravity="center"
+                android:text="Remove"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/group_312"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="51dp"
+            android:background="@drawable/textbox"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group_31">
+
+            <TextView
+                android:id="@+id/d112"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="56dp"
+                android:text="We are seeking an experienced C# Game Server Development Engineer.The candidate must have experience in developing game servers."
+                android:textColor="@color/text_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/software_engineer12"
+                android:layout_width="wrap_content"
+                android:layout_height="39.5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:text="Grafic Designer
+"
+                android:textColor="@color/text_color"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/apply12"
+                android:layout_width="89dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="221dp"
+                android:layout_marginTop="126dp"
+                android:backgroundTint="@color/button_color_blue"
+                android:gravity="center"
+                android:text="@string/apply_string"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/remove12"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="126dp"
+                android:backgroundTint="@color/button_color_red"
+                android:gravity="center"
+                android:text="Remove"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/group_313"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="51dp"
+            android:background="@drawable/textbox"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group_312">
+
+
+            <TextView
+                android:id="@+id/d113"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="56dp"
+                android:text="We are seeking an experienced C# Game Server Development Engineer.The candidate must have experience in developing game servers."
+                android:textColor="@color/text_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/software_engineer13"
+                android:layout_width="wrap_content"
+                android:layout_height="39.5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:text="Software Engineer"
+                android:textColor="@color/text_color"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/apply13"
+                android:layout_width="89dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="221dp"
+                android:layout_marginTop="126dp"
+                android:backgroundTint="@color/button_color_blue"
+                android:gravity="center"
+                android:text="@string/apply_string"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/remove13"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="126dp"
+                android:backgroundTint="@color/button_color_red"
+                android:gravity="center"
+                android:text="Remove"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

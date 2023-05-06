@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    tools:context=".Home">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="412dp"
+        android:layout_height="110dp"
+        android:background="#3C3F41"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/interest_candidates6"
+        android:layout_width="227.5dp"
+        android:layout_height="39.5dp"
+        android:text="Interest Candidates"
+        android:textColor="@color/title__color"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <TextView
+        android:id="@+id/search2"
+        android:layout_width="319dp"
+        android:layout_height="33dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:elevation="12dp"
+        android:text="  Search"
+        android:textColor="#7F7F7F"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <ImageView
+        android:id="@+id/igeew26"
+        android:layout_width="321dp"
+        android:layout_height="120dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.577"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415"
+        app:srcCompat="@drawable/rectangle_companyprofile" />
+
+    <TextView
+        android:id="@+id/university___university_of_colombo_email___azz1_u_gmail_com2"
+        android:layout_width="249dp"
+        android:layout_height="29dp"
+        android:text="university:university of colombo \n Email:azz1@gmail.com"
+        android:textColor="#7F7F7F"
+        android:textSize="12sp"
+        android:translationZ="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.642" />
+
+    <TextView
+        android:layout_width="198dp"
+        android:layout_height="20dp"
+        android:text="english_tutor"
+        android:textColor="@color/title__color"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:translationZ="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.737"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.594" />
+
+    <TextView
+        android:id="@+id/azhara"
+        android:layout_width="135.5dp"
+        android:layout_height="39.5dp"
+        android:text="Azhara R."
+        android:textColor="@color/title__color"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:translationZ="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
+
+    <TextView
+        android:id="@+id/savani"
+        android:layout_width="135.5dp"
+        android:layout_height="39.5dp"
+        android:text="Savani S."
+        android:textColor="@color/title__color"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:translationZ="20dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <ImageView
+        android:id="@+id/ima26"
+        android:layout_width="321dp"
+        android:layout_height="120dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.622"
+        app:srcCompat="@drawable/rectangle_companyprofile" />
+
+    <TextView
+        android:id="@+id/university___iit_email___saer_u_gmail_com2"
+        android:layout_width="249dp"
+        android:layout_height="29dp"
+        android:text="university:IIT \n  Email:saerugmail.com"
+        android:textColor="#7F7F7F"
+        android:textSize="12sp"
+        android:translationZ="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.829" />
+
+    <TextView
+        android:id="@+id/graphic_designer2"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:text="graphic designer"
+        android:textColor="@color/title__color"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:translationZ="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.788" />
+
+
+    <TextView
+        android:id="@+id/sandran"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:text="sandran.w"
+        android:textColor="@color/title__color"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:translationZ="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.755" />
+
+    <ImageView
+        android:id="@+id/iew26"
+        android:layout_width="321dp"
+        android:layout_height="120dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.577"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83"
+        app:srcCompat="@drawable/rectangle_companyprofile" />
+
+    <TextView
+        android:id="@+id/software_engineer"
+        android:layout_width="194dp"
+        android:layout_height="27dp"
+        android:text="software engineer"
+        android:textColor="@color/title__color"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:translationZ="10sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.417" />
+
+    <TextView
+        android:id="@+id/university___sliit_email___isuru_u_gmail_com2"
+        android:layout_width="249dp"
+        android:layout_height="29dp"
+        android:text="University: SLIIT                                             Email: ishh.u@gmail.com"
+        android:textColor="@color/as"
+        android:textSize="12sp"
+        android:translationZ="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46" />
+
+
+    <ImageView
+        android:id="@+id/image_3_ek"
+        android:layout_width="79dp"
+        android:layout_height="83dp"
+        android:contentDescription="image_3_ek1"
+        android:src="@drawable/image_3_ek1"
+        android:translationZ="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.422" />
+
+    <ImageView
+        android:id="@+id/image_3_ek2"
+        android:layout_width="79dp"
+        android:layout_height="83dp"
+        android:translationZ="10sp"
+        android:contentDescription="image_3_ek2"
+        android:src="@drawable/image_3_ek2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617" />
+
+
+    <ImageView
+        android:id="@+id/image_3_ek3"
+        android:layout_width="84dp"
+        android:layout_height="81dp"
+        android:contentDescription="image_3_ek3"
+        android:src="@drawable/image_3_ek3"
+        android:translationZ="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.819" />
+
+
+    <TextView
+        android:id="@+id/isuru_u_2"
+        android:layout_width="104dp"
+        android:layout_height="47dp"
+        android:text="ishan_u"
+        android:textColor="@color/title__color"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:translationZ="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.39" />
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="321dp"
+        android:layout_height="120dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.209"
+        app:srcCompat="@drawable/rectangle_companyprofile" />
+
+    <TextView
+        android:id="@+id/address_savani"
+        android:layout_width="249dp"
+        android:layout_height="29dp"
+        android:text="university of moratuwa Email:savani123gmail.com"
+        android:textColor="@color/as"
+        android:textSize="12sp"
+        android:translationZ="15dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.274" />
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationZ="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.222"
+        app:srcCompat="@drawable/image_3" />
+
+    <TextView
+        android:id="@+id/network_engineer"
+        android:layout_width="198dp"
+        android:layout_height="20dp"
+        android:text="network engineer"
+        android:textColor="@color/title__color"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:translationZ="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.233" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

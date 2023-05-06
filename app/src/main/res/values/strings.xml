@@ -1,6 +1,134 @@
 <resources>
     <string name="app_name">Candidate_Account_UIs</string>
 
+       <!-- welcome_screen strings -->
+    <string name="ek_img_content">ExportKit Image</string>
+    <string name="text_string"> </string>
+
+    <!-- welcome_screen_2 strings -->
+    <string name="welcome_screen_2_description">Your job hunt  just got easierBrowse and apply for the jobs on the go</string>
+    <string name="welcome_screen_2_title">Welcome to JobPlaza</string>
+
+    <!-- sign_in strings -->
+    <string name="login_to_your_account_string">Login to your Account</string>
+    <string name="email_string">Email</string>
+    <string name="password_string">Password</string>
+    <string name="sign_in_ek3_string">Sign in</string>
+    <string name="__or_sign_in_with__string">-Or sign in with-</string>
+    <string name="don_t_have_an_account__sign_up_string">Dont have an account? Sign up</string>
+
+    <!-- sign_up strings -->
+    <string name="create_your_account_string">Create your Account</string>
+    <string name="confirm_password_string">Confirm Password</string>
+    <string name="i__m_looking_for_job_string">I m Looking for Job</string>
+    <string name="i__m_offering_jobs_string">I mOfferingJobs</string>
+    <string name="sign_up_ek3_string">Sign up</string>
+    <string name="__or_sign_up_with__string">-Or sign up with-</string>
+
+    <!-- treding_jobs strings -->
+    <string name="trending_jobs_string">Trending Jobs</string>
+    <string name="search_string">Search</string>
+    <string name="d1">We are seeking an experienced C# Game Server Development Engineer.The candidate must have experience in developing game servers.</string>
+    <string name="software_engineer_string">Software Engineer</string>
+    <string name="lbs_company__pvt__ltd_string">LBS Company (PVT) Ltd</string>
+    <string name="apply_string">Apply</string>
+    <string name="d2">We are looking for a creative and strategic Social Media Content Manager to manage our companys presence on a multitude of online platforms. . </string>
+    <string name="social_media_content_manager_string">Social Media Content Manager</string>
+    <string name="nowah_co_string">Nowah.co</string>
+    <string name="apply_ek1_string">Apply</string>
+    <string name="d3">Assist customers to achieve financial goals by promoting Public Mutual products according to their suitability and needs.Develop and implement </string>
+    <string name="unit_trust_consultant_string">Unit Trust Consultant</string>
+    <string name="public_mutual_berhad_string">Public Mutual Berhad</string>
+    <string name="apply_ek2_string">Apply</string>
+
+    <!-- selected job description-->
+    <string name="software_engineer">Software Engineer</string>
+    <string name="lbs">LBS Company (PVT) Ltd</string>
+
+    <!-- secected_job_description strings -->
+    <string name="we_are_seeking">We are seeking an experienced C# Game Server Development Engineer relevant experience. The candidate must have experience in developing game servers for multiple game projects, especially being familiar with KCP protocol. </string>
+    <string name="we_are_seeking2">Job Requirements :\n\n* Curating content for the companys social media accounts.experience in C# game server development, with experience in multiple game projects preferred, and MUST be familiar with KCP protocol.\n\n* Familiar with component-based development mode (non-inheritance mode) and object-oriented programming concepts.</string>
+    <string name="calculate_average_salary_string">Calculate Average Salary</string>
+
+    <!-- candidate_application strings -->
+    <string name="choose_file_string">Choose File</string>
+    <string name="upload_university_id_string">Upload University ID</string>
+    <string name="upload_resume_string">Upload Resume</string>
+    <string name="confirm_string">Confirm</string>
+    <string name="contact_no_string">Contact No</string>
+    <string name="nic_number_string">NIC Number</string>
+    <string name="university_string">University</string>
+    <string name="full_name_string">Full Name</string>
+    <string name="application_form_string">Application Form</string>
+
+    <!--Success message  -->
+    <string name="success">Your Request Successfully submitted</string>
+    <string name="visit">Visit More</string>
+    <string name="social">Social Media Content Manager</string>
+    <string name="updated_successfully">Updated successfully</string>
+    <string name="ok">OK</string>
+    <string name="setting">Settings</string>
+
+    <!-- work_hour_calculator strings -->
+    <string name="enter_daily_working_hours_string">Enter daily working hours</string>
+    <string name="enter_number_of_days_work_on_month_string">Enter number of Days work on Month</string>
+    <string name="calculate_string">Calculate</string>
+    <string name="rs__10000_00_string">RS. 10000.00</string>
+    <string name="cal_des">According to your preferred working hours we are going to calculate your basic salary.</string>
+
+
+    <string name="we_are_looking">We are looking for a creative and strategic Social Media Content Manager to manage our company\'s presence on a multitude of online platforms.</string>
+    <string name="we_are_looking2">You’ll play an important role in :\n\n* Curating content for the company\'s social media accounts.\n\n*Monitoring and improving social media traffic, growth, engagement, and brand performance through both organic and paid marketing.\n\n*Collaborating with Content, Marketing, and Sales teams about content development, topics, and opportunities.</string>
+
+
+    <string name="experiences">* Previous experience working on software development projects, either through internships or personal projects\n\n* Familiarity with software development processes, including requirements gathering, design, implementation, testing, and deployment\n\n* Experience working with databases such as MySQL or PostgreSQL\n\n* Familiarity with cloud computing platforms such as Amazon Web Services (AWS) or Microsoft Azure\n\n* Experience with software testing and quality assurance methodologies\n\n* Experience working in a part-time or remote work environment</string>
+
+    <string name="skills">* Proficient in programming languages such as Java, Python, or C++\n\n* Knowledge of front-end development technologies such as HTML, CSS, and JavaScript\n\n* Experience with back-end development technologies such as Node.js, PHP, or Ruby on Rails\n\n* Familiarity with software development tools such as Git, JIRA, or Slack\n\n* Strong problem-solving skills and attention to detail\n\n* Ability to work independently and in a team environment\n\n* Good communication skills and ability to collaborate with others</string>
+
+    <string name="education">* Bachelor\'s degree in Computer Science.\n\n* Completion of relevant coursework in software engineering, programming, and software development\n\n* Familiarity with software development methodologies such as Agile or Scrum.</string>
+
+    <string name="deleteaccount">Are you sure want to delete your whole account? You\'ll lose everything. Everything you\'re ever posted will be gone forever.\n\nIf you\'re sure, confirm by logging in below.</string>
+
+    <!-- profile strings -->
+    <string name="bachelor_s_degree_in_computer_science__string">Bachelors degree in Computer Science.</string>
+    <string name="education_string">Education</string>
+    <string name="add_string">ADD</string>
+    <string name="good_morning__isuru_string">Good Morning, Isuru</string>
+    <string name="isuru_udantha_software_engineer_isuru_u_gmail_com_string">Isuru Udantha\nSoftware Engineer\nisuru.u@gmail.com</string>
+    <string name="previous_experience_working_on_software_development_projects__either_through_internships_or_personal_projects_string">Previous experience working on software development projects, either through internships or personal projects blaaa balaaa balaaaaa</string>
+    <string name="experiences_string">Experiences</string>
+    <string name="add_ek1_string">ADD</string>
+    <string name="proficient_in_programming_languages_such_as_java__python__or_c___knowledge_of_front_end_development_technologies_string">Proficient in programming languages such as Java, Python, or C++Knowledge of front-end development technologies</string>
+    <string name="skills_string">Skills</string>
+    <string name="add_ek2_string">ADD</string>
+
+    <string name="editname">Name :\nIsuru udantha</string>
+    <string name="editststus">Status :\nsoftware engineer</string>
+    <string name="editemail">Email :\nisuru.u@gmail.com</string>
+    <string name="changepassword">Change Password</string>
+    <string name="deleteaccountbutton">Delete My Account</string>
+
+
+    <!--_______________________________company side__________________________________-->
+
+    <!--profile candidate-->
+
+    <string name="udeshani_name_and_email">Udeshani Senavirathna udeshani.s@gmail.com</string>
+    <string name="Udeshani_S">Udeshani S.</string>
+    <string name="Network_Engineer">Network Engineer</string>
+    <string name="hire">Hire</string>
+    <string name="experiences_udeshani">Perform 24x7 network surveillance of clients network infrastructure and devices, to provide round-the-clock fault  and technical support.</string>
+    <string name="skills_udeshani">proficient in programming languages such as java python or c knowledge of front end development technologies.</string>
+    <string name="education_udeshani">Bachelor\'s degree in Computer Science Relevant coursework includes Marketing Principles, Consumer Behavior.</string>
+
+
+    <!--job post publish-->
+    <string name="My_Offerings">Job Offers</string>
+    <string name="abccompany">ABC Company (PVT) Ltd</string>
+    <string name="edit">Edit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <!--    Sign in-->
     <string name="sign_in_btn">Sign In</string>
     <string name="alt_sign_in">-Or sign in with-</string>

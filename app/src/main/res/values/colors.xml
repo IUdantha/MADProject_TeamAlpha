@@ -15,4 +15,26 @@
     <color name="description_text">#808080</color>
 
 
+
+    <color name="title__color">#1F0038</color>
+    <color name="as">#7F7F7F</color>
+    <color name="text_color">#000000</color>
+    <color name="ellipse_9_color">#1F0038</color>
+    <color name="box_color">#7F7F7F</color>
+    <color name="box_color2">#EFEFEF</color>
+    <color name="button_color_blue">#000080</color>
+    <color name="button_color_red">#FF0000</color>
+    <color name="top_box">#E4E4FF</color>
+
+
+
+    <color name="black_cancel_text">#0B0A0A</color>
+    <color name="backgroundTint_confirm">#7C2B2B</color>
+    <color name="black_cancel">#B8B6B6</color>
+    <color name="_bg__home___interest_candidates_ek2_color">#FEFEFE</color>
+    <color name="rectangle_1_color">#FFFFFF</color>
+
+    <color name="rectangle_7_color">#E4E4FF</color>
+    <color name="rectangle_8_color">#F2F2F2</color>
+    <color name="add_new_btn_color">#8F8F91</color>
 </resources>

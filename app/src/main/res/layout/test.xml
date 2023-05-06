@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/image_3"
+        android:layout_width="97dp"
+        android:layout_height="102dp"
+        android:layout_marginBottom="13dp"
+        android:contentDescription="image_3"
+        android:src="@drawable/image_3"
+        app:layout_constraintBottom_toTopOf="@+id/isuru_udantha_software_engineer_isuru_u_gmail_com"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/isuru_udantha_software_engineer_isuru_u_gmail_com"
+        android:layout_width="201dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="29dp"
+        android:gravity="center"
+        android:text="@string/isuru_udantha_software_engineer_isuru_u_gmail_com_string"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/group_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/vector11"
+        android:layout_width="26.67dp"
+        android:layout_height="26.67dp"
+        android:layout_marginStart="368dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="vector"
+        android:src="@drawable/vector11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/group_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/textbox"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/group_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/previous_experience_working_on_software_development_projects__either_through_internships_or_personal_projects"
+            android:layout_width="350dp"
+            android:layout_height="82.5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="59dp"
+            android:text="@string/previous_experience_working_on_software_development_projects__either_through_internships_or_personal_projects_string"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/experiences"
+            android:layout_width="152.5dp"
+            android:layout_height="39.5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/experiences_string"
+            android:textColor="@color/text_color"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/add_ek1"
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="13dp"
+            android:backgroundTint="@color/button_color_blue"
+            android:text="@string/add_ek1_string"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/textbox"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/group_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/proficient_in_programming_languages_such_as_java__python__or_c___knowledge_of_front_end_development_technologies"
+            android:layout_width="350dp"
+            android:layout_height="82.5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="59dp"
+            android:text="@string/proficient_in_programming_languages_such_as_java__python__or_c___knowledge_of_front_end_development_technologies_string"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/skills"
+            android:layout_width="80.5dp"
+            android:layout_height="39.5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/skills_string"
+            android:textColor="@color/text_color"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/add_ek2"
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="13dp"
+            android:backgroundTint="@color/button_color_blue"
+            android:text="@string/add_ek2_string"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/textbox"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/bachelor_s_degree_in_computer_science_"
+            android:layout_width="350dp"
+            android:layout_height="28.5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="59dp"
+            android:text="@string/bachelor_s_degree_in_computer_science__string"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/education"
+            android:layout_width="128.5dp"
+            android:layout_height="39.5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/education_string"
+            android:textColor="@color/text_color"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="13dp"
+            android:backgroundTint="@color/button_color_blue"
+            android:text="@string/add_string"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
