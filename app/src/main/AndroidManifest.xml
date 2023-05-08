@@ -16,15 +16,9 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".ResetPasswordActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".SignInActivity"
+            android:name=".candidateActivities.SplashActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,10 +29,38 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".SuccessMessageActivity" />
-        <activity android:name=".TrendingJobsActivity" />
-        <activity android:name=".MainActivity" />
+
+
+        <activity
+            android:name=".candidateActivities.ResetPasswordActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+
+        <activity
+            android:name=".candidateActivities.SignInActivity"
+            android:exported="true">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity android:name=".candidateActivities.SignUpActivity" />
+        <activity android:name=".candidateActivities.SuccessMessageActivity" />
+        <activity android:name=".candidateActivities.TrendingJobsActivity" />
+        <activity android:name=".candidateActivities.MainActivity" />
+        <activity android:name=".candidateActivities.TJobListComponentActivity" />
+        <activity android:name=".candidateActivities.SelecetedJobDescriptionActivity" />
+        <activity android:name=".candidateActivities.ProfileSettingsActivity" />
+        <activity android:name=".candidateActivities.ProfileSettingsNameUpdateActivity" />
+        <activity android:name=".candidateActivities.ProfileSettingsStatusUpdateActivity" />
+        <activity android:name=".candidateActivities.ProfileSettingsEmailUpdateActivity" />
+        <activity android:name=".candidateActivities.ProfileSettingsPasswordUpdateActivity" />
+        <activity android:name=".candidateActivities.ProfileSettingsDeleteActivity" />
+
 
         <meta-data
             android:name="preloaded_fonts"
@@ -58,19 +80,37 @@
 
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
-        </activity> <!-- Azmarah -->
+        </activity>
+
+
+
+    <!--Azmarah-->
+
         <activity
             android:name=".company.CompanyEditProfileActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".company.ComLogin"
+            android:exported="true">
+        </activity>
+
         <activity
             android:name=".company.ComCandidateResumeDownloadActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+        </activity>
         <activity
             android:name=".company.CompanyChangePwActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+        </activity>
+
+
         <activity
             android:name=".company.CompanyDeleteAccountActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+        </activity>
+
         <activity
             android:name=".company.CompanyDetailForm"
             android:exported="true">
@@ -80,9 +120,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".company.CompanyInterviewActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+        </activity>
+
         <activity
             android:name=".company.CompanyProfile"
             android:exported="true">
@@ -92,21 +135,36 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".company.ComLogin"
-            android:exported="true">
-
-        </activity>
 
         <activity
             android:name=".company.CompanyProfileSettings"
-            android:exported="true"></activity>
+            android:exported="true">
+        </activity>
+
         <activity
             android:name=".company.CompanySuccessfulMessageActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+        </activity>
+
         <activity
             android:name=".company.CompInterviewSendSuccessActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+        </activity>
+
+
+        <!-- sarindu -->
+
+        <activity
+            android:name=".MainActivity_sarindu"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.candidate_account_uis.MainActivity
+
 import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.company.entities.companyDetails
 import com.google.firebase.database.*

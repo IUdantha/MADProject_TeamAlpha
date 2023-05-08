@@ -9,7 +9,8 @@
     android:layout_height="250dp"
     android:background="#F3F3F3"
     android:elevation="100dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.example.candidate_account_uis.candidateActivities.TJobListComponentActivity">
 
 
     <ImageView

@@ -1,4 +1,4 @@
-package com.example.candidate_account_uis
+package com.example.candidate_account_uis.candidateActivities
 
 import android.app.Activity
 import android.content.Intent
@@ -6,8 +6,9 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
+import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.databinding.ActivitySignInBinding
+import com.example.candidate_account_uis.firebase.FirestoreClass
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -17,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 
 
-class SignInActivity : AppCompatActivity() {
+class SignInActivity : BaseActivity() {
 
     //    normal authentication
     private lateinit var binding: ActivitySignInBinding
@@ -54,7 +55,9 @@ class SignInActivity : AppCompatActivity() {
                 firebaseAuth.signInWithEmailAndPassword(email, pass)
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
-                            val intent = Intent(this, TrendingJobsActivity::class.java)
+                            // Calling the FirestoreClass signInUser function to get the data of user from database.
+                            FirestoreClass().loadUserData(this@SignInActivity)
+                            val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
                         } else {
                             Toast.makeText(

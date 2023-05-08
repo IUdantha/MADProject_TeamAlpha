@@ -1,4 +1,4 @@
-package com.example.adapters
+package com.example.candidate_account_uis.candidateActivities
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.candidate_account_uis.R
-import com.example.candidate_account_uis.job
 
 class t_job_list_adapter(var jobList: ArrayList<job>):RecyclerView.Adapter<t_job_list_adapter.ViewHolder>()  {
     class ViewHolder(itemview: View):RecyclerView.ViewHolder(itemview){
