@@ -101,4 +101,30 @@
     <string name="please_click_back_again_to_exit">Please click back again to exit.</string>
 
 
+
+    <!-- ===================== Sarindu  ===================== -->
+
+    <string name="experiences_string">Experiences</string>
+    <string name="skills_string">Skills</string>
+    <string name="education_string">Education</string>
+    <string name="ADD">ADD</string>
+
+    <!-- candidate_application strings -->
+    <string name="choose_file_string">Choose File</string>
+    <string name="upload_university_id_string">Upload University ID</string>
+    <string name="upload_resume_string">Upload Resume</string>
+    <string name="confirm_string">Confirm</string>
+    <string name="contact_no_string">Contact No</string>
+    <string name="nic_number_string">NIC Number</string>
+    <string name="university_string">University</string>
+    <string name="full_name_string">Full Name</string>
+    <string name="application_form_string">Application Form</string>
+
+    <!-- profile strings -->
+    <string name="bachelor_s_degree_in_computer_science__string">Bachelors degree in Computer Science.</string>
+    <string name="good_morning__isuru_string">Good Morning, Isuru</string>
+    <string name="isuru_udantha">Isuru Udantha\nSoftware Engineer\nisuru.u@gmail.com</string>
+
+
+
 </resources>
