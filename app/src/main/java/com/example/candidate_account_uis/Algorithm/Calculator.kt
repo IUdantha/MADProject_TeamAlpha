@@ -10,6 +10,7 @@ import android.widget.TextView
 import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.candidateActivities.ProfileSettingsActivity
 
+
 class Calculator : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,6 @@ class Calculator : AppCompatActivity() {
         val hourDay = findViewById<EditText>(R.id.hourDay)
         val calBtn = findViewById<Button>(R.id.calBtn)
         val calValue = findViewById<TextView>(R.id.calValue)
-
 
 
         // Set click listener for the Calculate button
@@ -41,7 +41,12 @@ class Calculator : AppCompatActivity() {
             // Set the result to the TextView
             calValue.text = "Rs. $formattedResult"
         }
-
-
     }
 }
+
+
+
+
+
+
+
