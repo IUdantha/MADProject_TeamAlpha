@@ -100,7 +100,7 @@
     <string name="facebook_client_token">56789</string>
 
 
-<!-- Azmarah -->
+    <!-- Azmarah -->
 
     <!-- Company Side_Profile Strings-->
     <!--activity_company_edit_profile -->
@@ -184,4 +184,13 @@
     <!--company_interview_send_success-->
     <string name="message">Message sent successfully</string>
     <string name="ok">OK</string>
+    <string name="ComPassword">Password</string>
+    <string name="already_have_an_ComAccount">Already have an account ?</string>
+    <string name="comLogin">Login</string>
+    <string name="create_comAccount">Create Account</string>
+    <string name="forgot_comPassword">Forgot Password ?</string>
+    <string name="don_t_have_an_comAccount">Don\'t have an account ?</string>
+    <string name="create_comAccountL">Create Account</string>
+    <string name="comEmailL">Email</string>
+    <string name="todo">TODO</string>
 </resources>
