@@ -14,13 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Candidate_Account_UIs"
         tools:targetApi="31">
-        <activity
-            android:name=".Calculator"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".candidateActivities.SplashActivity"
             android:exported="true">
@@ -127,7 +121,9 @@
             android:exported="true"></activity>
         <activity
             android:name=".company.CompInterviewSendSuccessActivity"
-            android:exported="true"></activity> <!-- sarindu -->
+            android:exported="true"></activity>
+
+        <!-- sarindu -->
         <activity
             android:name=".MainActivity_sarindu"
             android:exported="true">
