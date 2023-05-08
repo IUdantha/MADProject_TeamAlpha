@@ -45,9 +45,9 @@
 
     <!--    Profile-settings-->
     <string name="settings_heading">Settings</string>
-    <string name="name">Name\nIsuru Udantha</string>
-    <string name="status">Status\nSoftware Engineer</string>
-    <string name="Email">Email\nisuru.u@gmail.com</string>
+    <string name="name">Name\nEnter Name</string>
+    <string name="status">Status\nEnter Status</string>
+    <string name="Email">Email\nabc.gmail.com</string>
     <string name="chg_password">Change Password</string>
     <string name="dlt_account">Delete My Account</string>
 
@@ -82,7 +82,7 @@
     <!--    Delete message-->
     <string name="delete_message">Are you sure want to delete your whole account? You\'ll lose everything.
         Everything you\'re ever posted will be gone forever.\n\nIf you\'re sure, confirm by logging in below.</string>
-    <string name="ent_username">Enter Username</string>
+    <string name="ent_username">Enter Email</string>
     <string name="ent_password">Enter Password</string>
     <string name="conf_btn">Confirm</string>
     <string name="signInHeading">Login to your Account</string>

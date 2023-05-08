@@ -31,7 +31,7 @@ class SplashActivity : AppCompatActivity() {
 
             if (currentUserID.isNotEmpty()) {
                 // Start the Trending Job Activity
-                startActivity(Intent(this@SplashActivity, TrendingJobsActivity::class.java))
+                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             } else {
                 // Start the SignIn Activity
                 startActivity(Intent(this@SplashActivity, SignInActivity::class.java))

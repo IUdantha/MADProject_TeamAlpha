@@ -2,6 +2,7 @@ package com.example.candidate_account_uis.firebase
 
 import android.app.Activity
 import android.util.Log
+import android.widget.Toast
 import com.example.candidate_account_uis.model.User
 import com.example.candidate_account_uis.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
@@ -45,7 +46,7 @@ class FirestoreClass {
      * A function to SignIn using firebase and get the user details from Firestore Database.
      */
 
-    fun loadUserData(activity: Activity, readBoardsList: Boolean = false) {
+    fun loadUserData(activity: Activity) {
 
         // Here we pass the collection name from which we wants the data.
         mFireStore.collection(Constants.USERS)
@@ -63,6 +64,10 @@ class FirestoreClass {
 //                    is SignInActivity -> {
 //                        activity.signInSuccess(loggedInUser)
 //                    }
+                    is MainActivity -> {
+                        print("I am working")
+                        activity.updateNavigationUserDetails(loggedInUser)
+                    }
                 }
             }
             .addOnFailureListener { e ->

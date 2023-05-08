@@ -57,15 +57,6 @@
         app:layout_constraintTop_toBottomOf="@+id/view"
         tools:listitem="@layout/t_job_list_component"/>
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="419dp"
-        android:layout_height="107dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/navbar_temp_3" />
-
     <SearchView
         android:id="@+id/search_input"
         android:layout_width="289dp"
