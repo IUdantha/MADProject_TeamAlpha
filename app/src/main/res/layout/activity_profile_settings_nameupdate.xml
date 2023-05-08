@@ -37,7 +37,7 @@
         android:id="@+id/textView4"
         android:layout_width="284dp"
         android:layout_height="34dp"
-        android:fontFamily="@font/inter_semibold"
+
         android:text="@string/edt_name"
         android:textAlignment="viewStart"
         android:textColor="@color/description_text"
