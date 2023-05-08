@@ -101,7 +101,6 @@
     <string name="please_click_back_again_to_exit">Please click back again to exit.</string>
 
 
-
     <!-- ===================== Sarindu  ===================== -->
 
     <string name="experiences_string">Experiences</string>
@@ -124,7 +123,6 @@
     <string name="bachelor_s_degree_in_computer_science__string">Bachelors degree in Computer Science.</string>
     <string name="good_morning__isuru_string">Good Morning, Isuru</string>
     <string name="isuru_udantha">Isuru Udantha\nSoftware Engineer\nisuru.u@gmail.com</string>
-
 
 
     <!-- Azmarah -->
@@ -220,4 +218,10 @@
     <string name="create_comAccountL">Create Account</string>
     <string name="comEmailL">Email</string>
     <string name="todo">TODO</string>
+    <string name="salary">Salary per hour</string>
+    <string name="noDays">No of worked Days</string>
+    <string name="dayHour">Hours worked in a day</string>
+    <string name="calHeading">Work Hour Calculator</string>
+    <string name="calButton">Calculate</string>
+    <string name="calValue">Estimated Salary is: </string>
 </resources>
