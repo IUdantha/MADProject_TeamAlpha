@@ -5,15 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="415dp"
-        android:layout_height="104dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/navbar_temp_4" />
-
     <View
         android:id="@+id/view"
         android:layout_width="412dp"
@@ -77,10 +68,10 @@
         app:srcCompat="@drawable/edt_profile_pencil" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/nameBtn"
         android:layout_width="338dp"
         android:layout_height="66dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/btn_settings"
         android:fontFamily="@font/inter_medium"
         android:paddingLeft="20dp"
@@ -91,10 +82,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/emailView" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/statusBtn"
         android:layout_width="338dp"
         android:layout_height="66dp"
         android:layout_marginTop="10dp"
@@ -108,27 +99,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/nameBtn" />
 
     <Button
-        android:id="@+id/button7"
-        android:layout_width="338dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_settings"
-        android:fontFamily="@font/inter_medium"
-        android:paddingLeft="20dp"
-        android:text="@string/Email"
-        android:textAlignment="textStart"
-        android:textAllCaps="false"
-        android:textColor="@color/description_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
-
-    <Button
-        android:id="@+id/button8"
+        android:id="@+id/rePassword"
         android:layout_width="338dp"
         android:layout_height="66dp"
         android:layout_marginTop="10dp"
@@ -142,10 +116,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/statusBtn" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/delAccount"
         android:layout_width="338dp"
         android:layout_height="66dp"
         android:layout_marginTop="10dp"
@@ -159,7 +133,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/rePassword" />
+
+    <TextView
+        android:id="@+id/emailView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

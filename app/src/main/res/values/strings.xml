@@ -45,9 +45,9 @@
 
     <!--    Profile-settings-->
     <string name="settings_heading">Settings</string>
-    <string name="name">Name\nIsuru Udantha</string>
-    <string name="status">Status\nSoftware Engineer</string>
-    <string name="Email">Email\nisuru.u@gmail.com</string>
+    <string name="name">Name\nEnter Name</string>
+    <string name="status">Status\nEnter Status</string>
+    <string name="Email">Email\nabc.gmail.com</string>
     <string name="chg_password">Change Password</string>
     <string name="dlt_account">Delete My Account</string>
 
@@ -82,7 +82,7 @@
     <!--    Delete message-->
     <string name="delete_message">Are you sure want to delete your whole account? You\'ll lose everything.
         Everything you\'re ever posted will be gone forever.\n\nIf you\'re sure, confirm by logging in below.</string>
-    <string name="ent_username">Enter Username</string>
+    <string name="ent_username">Enter Email</string>
     <string name="ent_password">Enter Password</string>
     <string name="conf_btn">Confirm</string>
     <string name="signInHeading">Login to your Account</string>
@@ -98,6 +98,33 @@
     <string name="facebook_app_id">1234</string>
     <string name="fb_login_protocol_scheme">fb1234</string>
     <string name="facebook_client_token">56789</string>
+    <string name="please_click_back_again_to_exit">Please click back again to exit.</string>
+
+
+
+    <!-- ===================== Sarindu  ===================== -->
+
+    <string name="experiences_string">Experiences</string>
+    <string name="skills_string">Skills</string>
+    <string name="education_string">Education</string>
+    <string name="ADD">ADD</string>
+
+    <!-- candidate_application strings -->
+    <string name="choose_file_string">Choose File</string>
+    <string name="upload_university_id_string">Upload University ID</string>
+    <string name="upload_resume_string">Upload Resume</string>
+    <string name="confirm_string">Confirm</string>
+    <string name="contact_no_string">Contact No</string>
+    <string name="nic_number_string">NIC Number</string>
+    <string name="university_string">University</string>
+    <string name="full_name_string">Full Name</string>
+    <string name="application_form_string">Application Form</string>
+
+    <!-- profile strings -->
+    <string name="bachelor_s_degree_in_computer_science__string">Bachelors degree in Computer Science.</string>
+    <string name="good_morning__isuru_string">Good Morning, Isuru</string>
+    <string name="isuru_udantha">Isuru Udantha\nSoftware Engineer\nisuru.u@gmail.com</string>
+
 
 
 <!-- Azmarah -->

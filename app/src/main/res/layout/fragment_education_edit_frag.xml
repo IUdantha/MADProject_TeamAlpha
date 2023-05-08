@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Education_edit_frag">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/Experiences"
+        android:layout_width="110dp"
+        android:layout_height="39.5dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="66dp"
+        android:text="Education"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/education_text"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="350dp"
+        android:layout_height="470dp"
+        android:layout_marginBottom="34dp"
+        android:background="@drawable/textbox"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/saveedu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/we_are_seeking2"
+        android:layout_width="315dp"
+        android:layout_height="200dp"
+        android:hint="gg"
+        android:elevation="10dp"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_para"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_1" />
+
+    <Button
+        android:id="@+id/saveedu"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="96dp"
+        android:backgroundTint="@color/button_color_blue"
+        android:gravity="center"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

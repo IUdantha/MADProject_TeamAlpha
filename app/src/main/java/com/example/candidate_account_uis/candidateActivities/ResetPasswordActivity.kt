@@ -1,4 +1,4 @@
-package com.example.candidate_account_uis
+package com.example.candidate_account_uis.candidateActivities
 
 import android.content.ContentValues.TAG
 import android.content.Intent
@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.example.candidate_account_uis.databinding.ActivityResetPasswordBinding
+//import com.example.candidate_account_uis.isValidEmail
 import com.google.firebase.auth.FirebaseAuth
 
 class ResetPasswordActivity : AppCompatActivity() {

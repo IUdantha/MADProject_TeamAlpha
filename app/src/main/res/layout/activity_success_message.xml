@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F3F3F3"
     android:backgroundTint="#F3F3F3"
-    tools:context="com.example.candidate_account_uis.SuccessMessageActivity">
+    tools:context="com.example.candidate_account_uis.candidateActivities.SuccessMessageActivity">
 
     <ImageView
         android:id="@+id/imageView14"
