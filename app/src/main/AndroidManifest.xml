@@ -54,6 +54,13 @@
         <activity android:name=".candidateActivities.MainActivity" />
         <activity android:name=".candidateActivities.TJobListComponentActivity" />
         <activity android:name=".candidateActivities.SelecetedJobDescriptionActivity" />
+        <activity android:name=".candidateActivities.ProfileSettingsActivity" />
+        <activity android:name=".candidateActivities.ProfileSettingsNameUpdateActivity" />
+        <activity android:name=".candidateActivities.ProfileSettingsStatusUpdateActivity" />
+        <activity android:name=".candidateActivities.ProfileSettingsEmailUpdateActivity" />
+        <activity android:name=".candidateActivities.ProfileSettingsPasswordUpdateActivity" />
+        <activity android:name=".candidateActivities.ProfileSettingsDeleteActivity" />
+
 
         <meta-data
             android:name="preloaded_fonts"

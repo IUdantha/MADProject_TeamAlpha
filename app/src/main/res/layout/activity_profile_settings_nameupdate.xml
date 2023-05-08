@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/email_input4"
+        android:id="@+id/edtName"
         android:layout_width="336dp"
         android:layout_height="59dp"
         android:layout_marginStart="40dp"
@@ -95,7 +95,7 @@
         app:srcCompat="@drawable/bell" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/edtNameSaveBtn"
         android:layout_width="147dp"
         android:layout_height="55dp"
         android:layout_marginStart="45dp"
@@ -109,11 +109,11 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button11"
-        app:layout_constraintTop_toBottomOf="@+id/email_input4" />
+        app:layout_constraintStart_toEndOf="@+id/cancelBtn"
+        app:layout_constraintTop_toBottomOf="@+id/edtName" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/cancelBtn"
         android:layout_width="147dp"
         android:layout_height="55dp"
         android:layout_marginStart="40dp"
@@ -126,16 +126,7 @@
         android:textColor="@color/btn_color"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_input4" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="415dp"
-        android:layout_height="104dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/navbar_temp_4" />
+        app:layout_constraintTop_toBottomOf="@+id/edtName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
