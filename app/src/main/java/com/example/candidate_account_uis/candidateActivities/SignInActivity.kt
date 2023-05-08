@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.databinding.ActivitySignInBinding
+import com.example.candidate_account_uis.firebase.FirestoreClass
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -54,7 +55,9 @@ class SignInActivity : BaseActivity() {
                 firebaseAuth.signInWithEmailAndPassword(email, pass)
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
-                            val intent = Intent(this, TrendingJobsActivity::class.java)
+                            // Calling the FirestoreClass signInUser function to get the data of user from database.
+                            FirestoreClass().loadUserData(this@SignInActivity)
+                            val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
                         } else {
                             Toast.makeText(

@@ -20,36 +20,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="415dp"
-        android:layout_height="104dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/navbar_temp_4" />
-
     <EditText
-        android:id="@+id/email_input5"
-        android:layout_width="336dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="35dp"
-        android:background="@drawable/text_box_background"
-        android:elevation="5dp"
-        android:hint="@string/ent_password"
-        android:inputType="textEmailAddress"
-        android:padding="16dp"
-        android:textColorHint="#8A000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_input6" />
-
-    <EditText
-        android:id="@+id/email_input6"
+        android:id="@+id/confirmEmail"
         android:layout_width="336dp"
         android:layout_height="59dp"
         android:layout_marginStart="40dp"
@@ -122,11 +94,11 @@
         app:srcCompat="@drawable/bell" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/deleteConfirmBtn"
         android:layout_width="147dp"
         android:layout_height="55dp"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="190dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/btn_box_background_red"
         android:elevation="5dp"
@@ -137,15 +109,15 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toEndOf="@+id/button11"
-        app:layout_constraintTop_toBottomOf="@+id/email_input5" />
+        app:layout_constraintStart_toEndOf="@+id/cancelBtn"
+        app:layout_constraintTop_toBottomOf="@+id/confirmEmail" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/cancelBtn"
         android:layout_width="147dp"
         android:layout_height="55dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="190dp"
         android:background="@drawable/btn_outline"
         android:elevation="5dp"
         android:padding="16dp"
@@ -154,7 +126,7 @@
         android:textColor="@color/btn_color"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_input5" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmEmail" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
