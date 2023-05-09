@@ -4,5 +4,6 @@ package com.example.candidate_account_uis.companyjobs
         var vid: String? = null,
         var jbRl: String? = null,
         var jobDes: String? = null,
-        var comOver: String?=null
+        var comOver: String?=null,
+        var sal: String?=null
     )

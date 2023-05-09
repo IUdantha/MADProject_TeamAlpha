@@ -13,6 +13,7 @@
         android:layout_marginTop="16dp"
         android:backgroundTint="#210c4f"
         android:text="Back"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +27,8 @@
         android:layout_marginTop="30dp"
         android:backgroundTint="#210c4f"
         android:text="Update"
+
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/btnDelete"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +41,8 @@
         android:layout_marginTop="30dp"
         android:backgroundTint="#210c4f"
         android:text="Delete"
+
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnUpdate"
@@ -45,8 +50,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="413dp"
+        android:layout_height="313dp"
         android:layout_marginTop="140dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +95,7 @@
                 <TextView
                     android:id="@+id/tvVacId"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
@@ -138,7 +143,7 @@
                 <TextView
                     android:id="@+id/tvJbRole"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="114dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
@@ -189,8 +194,8 @@
 
                 <TextView
                     android:id="@+id/tvJD"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="263dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
@@ -222,7 +227,7 @@
                 android:layout_weight="0.6">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="111dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
 
@@ -243,8 +248,8 @@
 
                 <TextView
                     android:id="@+id/tvOv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="265dp"
+                    android:layout_height="59dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""

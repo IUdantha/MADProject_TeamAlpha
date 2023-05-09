@@ -68,7 +68,7 @@ class VacancyDetailsActivity: AppCompatActivity() {
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
-            Toast.makeText(this, "Vacancy data deleted", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Vacancy  deleted successfully", Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, VacancyFetching::class.java)
             finish()
@@ -110,7 +110,7 @@ class VacancyDetailsActivity: AppCompatActivity() {
                 etJD.text.toString(),
                 etOv.text.toString()
             )
-            Toast.makeText(applicationContext, "Vacancy Data Updated", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, "Vacancy Details Updated Successfully", Toast.LENGTH_LONG).show()
 
             //we are setting updated data to our textview
             tvJbRole.text=etJbRole.text.toString()
