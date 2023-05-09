@@ -44,7 +44,7 @@
         </activity>
         <activity android:name=".candidateActivities.SignUpActivity" />
         <activity android:name=".candidateActivities.SuccessMessageActivity" />
-        <activity android:name=".candidateActivities.TrendingJobsActivity" />
+        <activity android:name=".candidateActivities.TrendingJobsActivity" android:exported="true"/>
         <activity android:name=".candidateActivities.MainActivity" />
         <activity android:name=".candidateActivities.TJobListComponentActivity" />
         <activity android:name=".candidateActivities.SelecetedJobDescriptionActivity" />
