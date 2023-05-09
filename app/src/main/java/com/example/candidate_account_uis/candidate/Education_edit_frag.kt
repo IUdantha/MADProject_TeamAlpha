@@ -1,24 +1,25 @@
-package com.example.candidate_account_uis
+package com.example.candidate_account_uis.candidate
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
-import com.example.candidate_account_uis.databinding.FragmentExperienceEditFragBinding
+import androidx.fragment.app.Fragment
+import com.example.candidate_account_uis.R
+import com.example.candidate_account_uis.databinding.FragmentEducationEditFragBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
+class Education_edit_frag : Fragment() {
 
-class Experience_edit_frag : Fragment() {
-
-    private var _binding: FragmentExperienceEditFragBinding? = null
+    private var _binding: FragmentEducationEditFragBinding? = null
     private val binding get() = _binding!!
     private lateinit var database : DatabaseReference
 
-    var output3 : String ?= ""
+    var output1 : String ?= ""
+
 
 
     override fun onCreateView(
@@ -26,47 +27,34 @@ class Experience_edit_frag : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-//        val view = inflater.inflate(R.layout.fragment_experience_edit_frag, container, false)
-//        val textview3 : TextView = view.findViewById(R.id.we_are_seeking22)
-//
-//        output3 = arguments?.getString("we_are_seeking22")
-//        textview3.text = output3
-//
-//        return view
+        _binding = FragmentEducationEditFragBinding.inflate(inflater, container, false)
 
-        _binding = FragmentExperienceEditFragBinding.inflate(inflater,container,false)
+        val textview : TextView = binding.weAreSeeking2
 
-        val textview3 : TextView = binding.weAreSeeking22
+        output1 = arguments?.getString("we_are_seeking2")
+        textview.text = output1
 
-        output3 = arguments?.getString("we_are_seeking22")
-        textview3.text = output3
-
-
-        binding.saveexp.setOnClickListener {
+        binding.saveedu.setOnClickListener {
 
 //---------------------------------------------???????
             val userName = "amal"
 //---------------------------------------------???????
 
-            val exp = binding.weAreSeeking22.text.toString()
+            val edu = binding.weAreSeeking2.text.toString()
 
-
-            updateData(userName,exp)
+            updateData(userName,edu)
         }
 
         return binding.root
-
-
     }
 
-
-    private fun updateData(userName: String, exp: String) {
+    private fun updateData(userName: String, edu: String) {
 
         database = FirebaseDatabase.getInstance().getReference("UserproD")
         val userproD = mapOf<String,String>(
-            "experience" to exp,
+//            "experience" to exp,
 //            "skills" to skil,
-//            "eduction" to edu
+            "eduction" to edu
         )
 
         database.child(userName).updateChildren(userproD).addOnSuccessListener {
@@ -75,21 +63,19 @@ class Experience_edit_frag : Fragment() {
 //            binding.firstName.text.clear()
 //            binding.lastname.text.clear()
 //            binding.age.text.clear()
-            Toast.makeText(activity,"Successfuly Updated", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Successfuly Updated", Toast.LENGTH_SHORT).show()
 
             //------
             val transaction = activity?.supportFragmentManager?.beginTransaction()
-            transaction?.replace(R.id.frame_layout,ProfileFragment())?.commit()
+            transaction?.replace(R.id.frame_layout, ProfileFragment())?.commit()
             //--------
             //readData("amal")
 
         }.addOnFailureListener{
 
-            Toast.makeText(activity,"Failed to Update", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Failed to Update", Toast.LENGTH_SHORT).show()
 
         }}
-
-
 
 
 }
