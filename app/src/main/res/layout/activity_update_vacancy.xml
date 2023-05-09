@@ -25,21 +25,22 @@
 
     <EditText
         android:id="@+id/etOv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="411dp"
+        android:layout_height="69dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="OverView"
         android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/btnUpdateData"
-            android:layout_width="wrap_content"
-            android:backgroundTint="#210c4f"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="Update Data" />
+    <Button
+        android:id="@+id/btnUpdateData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#210c4f"
+        android:text="Update Data"
+        android:textColor="#EDE8E8" />
 
 
-    </LinearLayout>
+</LinearLayout>
