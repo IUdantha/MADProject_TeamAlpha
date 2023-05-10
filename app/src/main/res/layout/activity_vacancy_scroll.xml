@@ -35,25 +35,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
 
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/upNav2" />
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <EditText
-            android:id="@+id/textViewJobRoleFill2"
-            android:layout_width="307dp"
-            android:layout_height="70dp"
-            android:background="#FEFEFE"
-            android:elevation="10dp"
-            android:ems="10"
-            android:hint="Salary"
-            android:paddingStart="12dp"
-            android:shadowColor="#201C1C"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <View
+            android:id="@+id/upNav4"
+            android:layout_width="413dp"
+            android:layout_height="95dp"
+            android:background="#E3E3FE"
+            android:backgroundTint="#E3E3FE"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.482" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView16"
@@ -69,87 +62,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <View
-            android:id="@+id/upNav2"
-            android:layout_width="410dp"
-            android:layout_height="110dp"
-            android:background="#E3E3FE"
-            android:backgroundTint="#E3E3FE"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <EditText
-            android:id="@+id/textViewJobRoleFill"
-            android:layout_width="307dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="113dp"
-            android:background="#FEFEFE"
-            android:elevation="10dp"
-            android:ems="10"
-            android:hint="Job role"
-            android:paddingStart="12dp"
-            android:shadowColor="#201C1C"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView16" />
-
-        <EditText
-            android:id="@+id/textViewJobDesFill"
-            android:layout_width="307dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="40dp"
-            android:background="#FEFEFE"
-            android:elevation="10dp"
-            android:hint=" Job Description"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewJobRoleFill" />
-
-        <EditText
-            android:id="@+id/textViewOverViewFill"
-            android:layout_width="307dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="44dp"
-            android:background="#FEFEFE"
-            android:elevation="10dp"
-            android:filterTouchesWhenObscured="false"
-            android:hint="Company overview"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewJobDesFill" />
 
         <Button
             android:id="@+id/submit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="796dp"
-            android:backgroundTint="#210c4f"
+            android:layout_width="135dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="656dp"
+            android:backgroundTint="#00007F"
             android:text="Submit"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/button7"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.188"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="249dp"
-            android:layout_marginTop="796dp"
-            android:layout_marginEnd="68dp"
-            android:backgroundTint="#210c4f"
+            android:layout_width="135dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="656dp"
+            android:backgroundTint="#00007F"
             android:text="Cancel"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.858"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -157,15 +97,100 @@
             android:id="@+id/textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="36dp"
             android:text="Add Job Offers"
             android:textColor="#041051"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/upNav2"
-            app:layout_constraintHorizontal_bias="0.19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/textViewJobRoleFill"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="236dp"
+            android:layout_marginBottom="28dp"
+            android:autofillHints=""
+            android:background="@drawable/rectangle_companyprofile"
+            android:elevation="5dp"
+            android:ems="10"
+            android:hint="Job Title"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:shadowColor="#201C1C"
+            app:layout_constraintBottom_toTopOf="@+id/edtComContact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/textViewJobRoleFill2"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="516dp"
+            android:layout_marginBottom="28dp"
+            android:autofillHints=""
+            android:background="@drawable/rectangle_companyprofile"
+            android:elevation="5dp"
+            android:ems="10"
+            android:hint="Salary per hour"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:shadowColor="#201C1C"
+            app:layout_constraintBottom_toTopOf="@+id/edtComContact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/textViewOverViewFill"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="424dp"
+            android:layout_marginBottom="28dp"
+            android:autofillHints=""
+            android:background="@drawable/rectangle_companyprofile"
+            android:elevation="5dp"
+            android:ems="10"
+            android:hint="Company Overview"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:shadowColor="#201C1C"
+            app:layout_constraintBottom_toTopOf="@+id/edtComContact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/textViewJobDesFill"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="328dp"
+            android:autofillHints=""
+            android:background="@drawable/rectangle_companyprofile"
+            android:elevation="5dp"
+            android:ems="10"
+            android:hint="Job Description"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:shadowColor="#201C1C"
+
+            app:layout_constraintBottom_toTopOf="@+id/textViewOverViewFill"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="LabelFor,RtlSymmetry" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
