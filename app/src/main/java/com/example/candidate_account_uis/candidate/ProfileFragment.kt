@@ -1,18 +1,16 @@
-package com.example.candidate_account_uis
+package com.example.candidate_account_uis.candidate
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.candidate_account_uis.databinding.FragmentProfileBinding
-import com.example.mad_project_sarindu.communicator
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-
 
 class ProfileFragment : Fragment() {
 
@@ -53,7 +51,7 @@ class ProfileFragment : Fragment() {
 //        }
 //        return view
 
-        _binding = FragmentProfileBinding.inflate(inflater,container,false)
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
         readData("amal")
 
@@ -97,7 +95,7 @@ class ProfileFragment : Fragment() {
                 val name = it.child("name").value
 
 
-                Toast.makeText(activity,"successfully read",Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, "successfully read", Toast.LENGTH_SHORT).show()
                 //binding.editTextText5.text.clear()
                 binding.experiencetextbox.text =exp.toString()
                 binding.skilltext.text =skil.toString()
@@ -109,13 +107,13 @@ class ProfileFragment : Fragment() {
             }
             else{
 
-                Toast.makeText(activity,"User doesn't exist",Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, "User doesn't exist", Toast.LENGTH_SHORT).show()
             }
 
 
         }.addOnFailureListener {
 
-            Toast.makeText(activity,"failed",Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "failed", Toast.LENGTH_SHORT).show()
 
         }
 

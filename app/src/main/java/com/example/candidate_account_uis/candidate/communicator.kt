@@ -1,4 +1,4 @@
-package com.example.mad_project_sarindu
+package com.example.candidate_account_uis.candidate
 
 interface communicator {
 

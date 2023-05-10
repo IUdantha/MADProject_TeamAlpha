@@ -125,7 +125,7 @@
             android:name=".company.CompInterviewSendSuccessActivity"
             android:exported="true" /> <!-- sarindu -->
         <activity
-            android:name=".MainActivity_sarindu"
+            android:name=".candidate.MainActivity_sarindu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
