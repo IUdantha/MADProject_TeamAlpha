@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".companyjobs.InterestedCandidates">
+
+    <View
+        android:id="@+id/upNav"
+        android:layout_width="410dp"
+        android:layout_height="110dp"
+        android:background="#E3E3FE"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/bottomNav"
+        android:layout_width="410dp"
+        android:layout_height="81dp"
+        android:background="#E3E3FE"
+        android:backgroundTint="#E3E3FE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="Interested Candidates"
+        android:textColor="#041051"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/upNav"
+        app:layout_constraintEnd_toEndOf="@+id/upNav"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="@+id/upNav"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.313" />
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rectangle_8_shape"
+        android:contentDescription="@string/HomeIcon"
+        android:padding="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/vector_ek3" />
+
+
+    <ImageView
+        android:id="@+id/FormIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="@string/FormIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="@+id/bottomNav"
+        app:srcCompat="@drawable/vector" />
+
+    <ImageView
+        android:id="@+id/ProfileIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="@string/ProfileIcon"
+        android:src="@drawable/vector_ek2"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNav"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="@+id/bottomNav" />
+
+    <SearchView
+        android:id="@+id/comCandidateSearch"
+        android:layout_width="325dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/rectangle_1"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="@+id/upNav"
+        app:layout_constraintTop_toBottomOf="@+id/Heading" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNav" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,39 +1,39 @@
 package com.example.candidate_account_uis.company
 
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.util.Patterns
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-
 import com.example.candidate_account_uis.R
+import com.example.candidate_account_uis.candidateActivities.ResetPasswordActivity
 import com.example.candidate_account_uis.company.entities.companyDetails
+import com.example.candidate_account_uis.databinding.ActivityComLoginBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 
 class ComLogin : AppCompatActivity() {
 
-    var comLoginEmail: EditText? = null
-    var comLoginPassword: EditText? = null
-//    var comLoginButton: Button? = null
-//    var createComAcc: TextView? = null
+    //authentication
+    private lateinit var binding: ActivityComLoginBinding
+    private lateinit var firebaseAuth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_com_login)
+        binding = ActivityComLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        comLoginEmail = findViewById<EditText>(R.id.comLoginEmail)
-        comLoginPassword = findViewById<EditText>(R.id.comLoginPassword)
-        val comLoginButton = findViewById<Button>(R.id.comLoginButton)
+        firebaseAuth = FirebaseAuth.getInstance()
+
         val createComAcc = findViewById<TextView>(R.id.createComAcc)
-
-        comLoginButton.setOnClickListener {
-            if (validateUsername() == true || validatePassword() == true) {
-                checkUser()
-            }
-        }
 
         createComAcc.setOnClickListener(View.OnClickListener() {
             val intent = Intent(this, CompanyDetailForm::class.java)
@@ -41,63 +41,44 @@ class ComLogin : AppCompatActivity() {
 
         })
 
-    }
-
-    fun validateUsername(): Boolean? {
-        val comEmail : String? = comLoginEmail?.text.toString()
-        return if (comEmail.isNullOrEmpty()) {
-            comLoginEmail!!.error = "Email cannot be empty"
-            false
-        } else {
-            comLoginEmail!!.error = null
-            true
-        }
-    }
-
-    fun validatePassword(): Boolean? {
-        val comPwd: String? = comLoginPassword?.text.toString()
-        return if (comPwd.isNullOrEmpty()) {
-            comLoginPassword!!.error = "Password cannot be empty"
-            false
-        } else {
-            comLoginPassword!!.error = null
-            true
-        }
-    }
-
-    fun checkUser() {
-        val userComEmail = findViewById<EditText>(R.id.comLoginEmail).text.toString()
-        val userComPassword = findViewById<EditText>(R.id.comLoginPassword).text.toString()
-
-        val reference = FirebaseDatabase.getInstance().getReference("companyDetails")
-        val checkCompanyDetails: Query = reference.orderByChild("email").equalTo(userComEmail)
-
-        checkCompanyDetails.addListenerForSingleValueEvent(object : ValueEventListener {
-
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()) {
-                    comLoginEmail!!.error = null
-
-                    val passwordFromDB = snapshot.child(userComEmail).child("password").getValue(String::class.java)
-
-                    if (passwordFromDB == userComPassword) {
-                        comLoginEmail!!.error = null
-
+        //authentication
+        binding.comLoginButton.setOnClickListener {
+            val email = binding.comLoginEmail.text.toString()
+            val password = binding.comLoginPassword.text.toString()
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+                    if (it.isSuccessful) {
                         val intent = Intent(this@ComLogin, CompanyProfile::class.java)
                         startActivity(intent)
-
                     } else {
-                        comLoginPassword!!.setError("Invalid Credentials")
-                        comLoginPassword!!.requestFocus()
+                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
-                } else {
-                    comLoginEmail!!.error = "User does not exist"
-                    comLoginEmail!!.requestFocus()
                 }
+            } else {
+                Toast.makeText(this, "Fields cannot be empty", Toast.LENGTH_SHORT).show()
             }
-
-            override fun onCancelled(error: DatabaseError) {}
-        })
+        }
+        binding.resetComPassword.setOnClickListener {
+            val intent = Intent(this, CompanyChangePwActivity::class.java)
+            startActivity(intent)
+        }
     }
-
 }
+//
+        //authentication
+//    fun compareEmail(changePwEmail: EditText){
+//        if (changePwEmail.text.toString().isEmpty()){
+//            return
+//        }
+//        if (!Patterns.EMAIL_ADDRESS.matcher(changePwEmail.text.toString()).matches()){
+//            return
+//        }
+//        firebaseAuth.sendPasswordResetEmail(changePwEmail.text.toString())
+//            .addOnCompleteListener { task ->
+//                if (task.isSuccessful) {
+//                    Toast.makeText(this, "Check your email", Toast.LENGTH_SHORT).show()
+//                }
+//            }
+//        }
+
+
