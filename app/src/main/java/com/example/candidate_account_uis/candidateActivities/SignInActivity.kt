@@ -58,7 +58,7 @@ class SignInActivity : BaseActivity() {
                         if (it.isSuccessful) {
                             // Calling the FirestoreClass signInUser function to get the data of user from database.
                             FirestoreClass().loadUserData(this@SignInActivity)
-                            val intent = Intent(this, MainActivity::class.java)
+                            val intent = Intent(this, MainActivity_sarindu::class.java)
                             startActivity(intent)
                         } else {
                             Toast.makeText(
@@ -120,7 +120,7 @@ class SignInActivity : BaseActivity() {
         val credential = GoogleAuthProvider.getCredential(account.idToken, null)
         auth.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful) {
-                val intent: Intent = Intent(this, MainActivity::class.java)
+                val intent: Intent = Intent(this, MainActivity_sarindu::class.java)
                 intent.putExtra("email", account.email)
                 intent.putExtra("name", account.displayName)
                 startActivity(intent)
