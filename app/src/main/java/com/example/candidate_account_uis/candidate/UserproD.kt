@@ -1,6 +1,4 @@
-package com.example.mad_project_sarindu
-
-import android.widget.EditText
+package com.example.candidate_account_uis.candidate
 
 data class UserproD(val name: String? = null,
                     val experience: String? = null,

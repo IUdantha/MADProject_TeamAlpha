@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Experience_edit_frag">
+    tools:context=".candidate.Experience_edit_frag">
 
     <View
         android:id="@+id/rectangle_1"

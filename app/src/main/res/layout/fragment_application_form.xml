@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".candidate.ApplicationFormFragment">
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="350dp"
+        android:layout_height="570dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="31dp"
+        android:background="@drawable/textbox"
+        android:elevation="2dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/application_form" />
+
+    <TextView
+        android:id="@+id/application_form"
+        android:layout_width="196.5dp"
+        android:layout_height="39.5dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="107dp"
+        android:elevation="5dp"
+        android:text="@string/application_form_string"
+        android:textAlignment="center"
+        android:textColor="@color/text_color"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/full_name"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/textbox"
+        android:elevation="5dp"
+        android:hint="@string/full_name_string"
+        android:inputType=""
+        android:paddingLeft="5dp"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/textbox1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_1" />
+
+    <EditText
+        android:id="@+id/contact_no"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textbox"
+        android:elevation="5dp"
+        android:hint="@string/contact_no_string"
+        android:inputType="number"
+        android:paddingLeft="5dp"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toBottomOf="@+id/full_name" />
+
+    <EditText
+        android:id="@+id/nic_number"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textbox"
+        android:elevation="5dp"
+        android:hint="@string/nic_number_string"
+        android:inputType=""
+        android:paddingLeft="5dp"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toBottomOf="@+id/contact_no" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textbox"
+        android:elevation="5dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="5dp"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toBottomOf="@+id/nic_number" />
+
+    <EditText
+        android:id="@+id/university"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textbox"
+        android:elevation="5dp"
+        android:hint="@string/university_string"
+        android:inputType=""
+        android:paddingLeft="5dp"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <Button
+        android:id="@+id/choose_file"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="128dp"
+        android:background="@drawable/buttoncan1"
+        android:text="@string/choose_file_string"
+        android:textColor="@color/box_color"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1" />
+
+    <TextView
+        android:id="@+id/upload_university_id"
+        android:layout_width="165dp"
+        android:layout_height="28.5dp"
+        android:layout_marginBottom="136dp"
+        android:elevation="5dp"
+        android:text="@string/upload_university_id_string"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1" />
+
+    <Button
+        android:id="@+id/upload_resume"
+        android:layout_width="168dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginBottom="36dp"
+        android:elevation="5dp"
+        android:background="@drawable/buttoncan2"
+        android:text="@string/upload_resume_string"
+        android:textColor="@color/button_color_blue"
+        android:textSize="@dimen/button1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        />
+
+    <Button
+        android:id="@+id/application_confirm"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginBottom="36dp"
+        android:text="@string/confirm_string"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        android:background="@drawable/buttoncan3"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
