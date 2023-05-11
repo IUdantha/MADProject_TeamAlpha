@@ -72,12 +72,14 @@ class ApplicationFormFragment : Fragment() {
                     if (documents.size() > 0) {
                         val document = documents.first()
                         val userid = document.getString("id")
+                        val imagepath = document.getString("image")
+
 
                         database = FirebaseDatabase.getInstance().getReference("CandidateAppication")
 
                         val applicationid = database.push().key!!
 
-                        val applicationData = ApplicationData(userid,applicationid,fullname,cno,nic,email,uni)
+                        val applicationData = ApplicationData(userid,applicationid,fullname,cno,nic,email,uni,imagepath)
 
                         database.child(applicationid).setValue(applicationData).addOnSuccessListener {
 

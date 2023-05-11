@@ -8,5 +8,6 @@ data class ApplicationData(
     val nicnumber: String? = null,
     val email: String? = null,
     val university: String? = null,
+    val imagepath: String? = null
 
 )

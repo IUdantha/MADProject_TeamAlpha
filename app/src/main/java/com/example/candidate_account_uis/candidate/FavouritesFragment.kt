@@ -41,15 +41,7 @@ class FavouritesFragment : Fragment() {
 //            transaction?.replace(R.id.frame_layout,ApplicationFormFragment())?.commit()
 //        }
 
-//        val mAdapter = FavAdapter()
-//        favJobRecyclerView.adapter = mAdapter
-//
-//        mAdapter.setOnItemClickListener(object : FavAdapter.onItemClickListener{
-//            override fun onItemClick(position: Int) {
-//                val transaction = activity?.supportFragmentManager?.beginTransaction()
-//                transaction?.replace(R.id.frame_layout,ApplicationFormFragment())?.commit()
-//            }
-//        })
+
 
         return binding.root
     }
@@ -70,5 +62,8 @@ class FavouritesFragment : Fragment() {
 
             adapter.updateFavJobList(it)
         })
+
+
     }
+
 }
