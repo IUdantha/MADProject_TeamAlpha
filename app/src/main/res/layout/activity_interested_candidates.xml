@@ -83,7 +83,7 @@
         app:layout_constraintHorizontal_bias="0.843"
         app:layout_constraintStart_toStartOf="@+id/bottomNav" />
 
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/comCandidateSearch"
         android:layout_width="325dp"
         android:layout_height="32dp"

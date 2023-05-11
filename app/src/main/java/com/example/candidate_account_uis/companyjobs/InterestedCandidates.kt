@@ -15,6 +15,9 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import androidx.appcompat.widget.SearchView
+import java.util.*
+
 
 class InterestedCandidates : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,7 +64,6 @@ class InterestedCandidates : AppCompatActivity() {
             }
         })
 
-
         //navigation buttons
         val homeIcon = findViewById<ImageView>(R.id.homeIcon)
         homeIcon.setOnClickListener(View.OnClickListener() {
@@ -80,6 +82,7 @@ class InterestedCandidates : AppCompatActivity() {
             val intent = Intent(this, CompanyProfile::class.java)
             startActivity(intent)
         })
+
 
     }
 }

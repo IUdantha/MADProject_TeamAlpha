@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.company.entities.companyDetails
 import com.example.candidate_account_uis.companyjobs.InterestedCandidates
@@ -22,6 +23,7 @@ class CompanyEditProfileActivity : AppCompatActivity() {
     private lateinit var phone: EditText
     private lateinit var email: EditText
     private lateinit var description: EditText
+    private lateinit var comProfilePicture: ImageView
 
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var firebaseUser: FirebaseUser
@@ -36,6 +38,7 @@ class CompanyEditProfileActivity : AppCompatActivity() {
             phone = findViewById(R.id.phone)
             email = findViewById(R.id.email)
             description = findViewById(R.id.description)
+            comProfilePicture = findViewById(R.id.imageView2)
 
             firebaseAuth = FirebaseAuth.getInstance()
             firebaseUser = firebaseAuth.currentUser!!
@@ -55,6 +58,14 @@ class CompanyEditProfileActivity : AppCompatActivity() {
                                 phone.setText(user.contact.toString())
                                 email.setText(user.email)
                                 description.setText(user.description)
+
+                                // Load the user's profile picture into the ImageView using Glide
+                                Glide.with(this@CompanyEditProfileActivity)
+                                    .load(user.comProfilePicture)
+                                    .placeholder(R.drawable.logobg)
+                                    .error(R.drawable.logobg)
+                                    .circleCrop()
+                                    .into(comProfilePicture)
                             }
                         }
                     }
