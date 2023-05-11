@@ -1,7 +1,9 @@
 package com.example.candidate_account_uis.candidate
 
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
@@ -17,10 +19,12 @@ import com.example.candidate_account_uis.candidateActivities.ProfileSettingsActi
 import com.example.candidate_account_uis.candidateActivities.SignInActivity
 import com.example.candidate_account_uis.candidateActivities.job
 import com.example.candidate_account_uis.databinding.ActivityMainSarinduBinding
+import com.example.candidate_account_uis.firebase.FirestoreClass
 import com.example.candidate_account_uis.model.User
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
+import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivity_sarindu : BaseActivity(), communicator, NavigationView.OnNavigationItemSelectedListener {
 
@@ -55,6 +59,7 @@ class MainActivity_sarindu : BaseActivity(), communicator, NavigationView.OnNavi
         val nav_view: NavigationView = findViewById(R.id.nav_view)
         // Assign the NavigationView.OnNavigationItemSelectedListener to navigation view.
         nav_view.setNavigationItemSelectedListener(this)
+        updateNavigationUserDetails()
         //------------------------------------------------------------------------
 
 
@@ -119,31 +124,39 @@ class MainActivity_sarindu : BaseActivity(), communicator, NavigationView.OnNavi
     /**
      * A function to get the current user details from firebase.
      */
-    fun updateNavigationUserDetails(user: User) {
+    fun updateNavigationUserDetails() {
 
-        hideProgressDialog()
-
-        mUserName = user.name
 
         // The instance of the header view of the navigation view.
         val nav_view: NavigationView = findViewById(R.id.nav_view)
         val headerView = nav_view.getHeaderView(0)
 
-        // The instance of the user image of the navigation view.
-        val navUserImage = headerView.findViewById<ImageView>(R.id.iv_user_image)
-
-        // Load the user image in the ImageView.
-        Glide
-            .with(this@MainActivity_sarindu)
-            .load(user.image) // URL of the image
-            .centerCrop() // Scale type of the image.
-            .placeholder(R.drawable.ic_user_place_holder) // A default place holder
-            .into(navUserImage) // the view in which the image will be loaded.
 
         // The instance of the user name TextView of the navigation view.
         val navUsername = headerView.findViewById<TextView>(R.id.tv_username)
         // Set the user name
-        navUsername.text = "GAMAGE" //user.name
+        //Get database instance
+        val db = FirebaseFirestore.getInstance()
+
+        val collectionUsers = db.collection("users")
+        val nowUser = FirestoreClass().getCurrentUserID()
+
+        val query = collectionUsers.whereEqualTo("id", nowUser)
+
+        query.get().addOnSuccessListener { documents ->
+            if (documents.size() > 0) {
+                val document = documents.first()
+                val name = document.getString("name")
+                val status = document.getString("status")
+                val email = document.getString("email")
+                navUsername.text = name //user.name
+            } else {
+                Log.d(ContentValues.TAG, "No matching documents.")
+            }
+        }.addOnFailureListener { exception ->
+            Log.d(ContentValues.TAG, "Error getting documents: ", exception)
+        }
+
 
     }
 

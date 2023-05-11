@@ -38,11 +38,12 @@
     <EditText
         android:id="@+id/we_are_seeking2"
         android:layout_width="315dp"
-        android:layout_height="200dp"
-        android:hint="gg"
+        android:layout_height="wrap_content"
+        android:hint="Education"
         android:elevation="10dp"
         android:textColor="@color/text_color"
         android:textSize="@dimen/text_para"
+        android:background="@drawable/rectangle_1"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
         app:layout_constraintHorizontal_bias="0.485"
@@ -54,10 +55,10 @@
         android:layout_width="100dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal|center"
-        android:layout_marginStart="155dp"
-        android:layout_marginEnd="156dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="91dp"
         android:layout_marginBottom="96dp"
-        android:backgroundTint="@color/button_color_blue"
+        android:background="@drawable/buttoncan3"
         android:gravity="center"
         android:text="Save"
         android:textColor="@color/white"
@@ -65,8 +66,27 @@
         android:textStyle="bold"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/backedu"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/backedu"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="96dp"
+        android:background="@drawable/buttoncan2"
+        android:gravity="center"
+        android:text="Back"
+        android:textColor="@color/button_color_blue"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

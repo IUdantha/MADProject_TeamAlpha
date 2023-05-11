@@ -10,9 +10,15 @@ data class User (
     val image: String = "",
     val status: String = "",
     val fcmToken: String = "",
+    val experience: String = "",
+    val skills: String = "",
+    val education: String = "",
     var selected: Boolean = false
 ) : Parcelable {
     constructor(source: Parcel) : this(
+        source.readString()!!,
+        source.readString()!!,
+        source.readString()!!,
         source.readString()!!,
         source.readString()!!,
         source.readString()!!,
@@ -30,6 +36,9 @@ data class User (
         writeString(image)
         writeString(status)
         writeString(fcmToken)
+        writeString(experience)
+        writeString(skills)
+        writeString(education)
     }
 
     companion object {

@@ -6,9 +6,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.candidate_account_uis.R
+
+import com.example.candidate_account_uis.candidate.HomeFragment
+import com.example.candidate_account_uis.candidate.MainActivity_sarindu
+import com.example.candidate_account_uis.candidate.ProfileFragment
+
+
 import com.example.candidate_account_uis.databinding.ActivitySignInBinding
 import com.example.candidate_account_uis.firebase.FirestoreClass
 import com.google.firebase.firestore.FirebaseFirestore
@@ -31,6 +38,11 @@ class ProfileSettingsActivity: AppCompatActivity() {
         val emailView = findViewById<TextView>(R.id.emailView)
 
 
+
+        val settingsBackBtn = findViewById<ImageView>(R.id.settingsBackBtn)
+
+
+
         nameButton.setOnClickListener {
             val thisIntent = Intent(this, ProfileSettingsNameUpdateActivity::class.java)
             startActivity(thisIntent)
@@ -50,6 +62,13 @@ class ProfileSettingsActivity: AppCompatActivity() {
             val thisIntent = Intent(this, ProfileSettingsDeleteActivity::class.java)
             startActivity(thisIntent)
         }
+
+        settingsBackBtn.setOnClickListener {
+            val thisIntent = Intent(this, MainActivity_sarindu::class.java)
+            startActivity(thisIntent)
+        }
+
+
 
         //Get database instance
         val db = FirebaseFirestore.getInstance()
@@ -86,10 +105,6 @@ class ProfileSettingsActivity: AppCompatActivity() {
 //                // Handle failed query result
 //                Log.w(TAG, "Error getting documents.", exception)
 //            }
-
-
-
-
 
 
     }

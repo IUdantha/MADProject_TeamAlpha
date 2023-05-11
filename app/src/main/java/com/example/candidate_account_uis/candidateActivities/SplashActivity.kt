@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import com.example.candidate_account_uis.R
+import com.example.candidate_account_uis.candidate.MainActivity_sarindu
 import com.example.candidate_account_uis.firebase.FirestoreClass
 
 class SplashActivity : AppCompatActivity() {
@@ -31,7 +32,7 @@ class SplashActivity : AppCompatActivity() {
 
             if (currentUserID.isNotEmpty()) {
                 // Start the Trending Job Activity
-                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                startActivity(Intent(this@SplashActivity, MainActivity_sarindu::class.java))
             } else {
                 // Start the SignIn Activity
                 startActivity(Intent(this@SplashActivity, SignInActivity::class.java))
