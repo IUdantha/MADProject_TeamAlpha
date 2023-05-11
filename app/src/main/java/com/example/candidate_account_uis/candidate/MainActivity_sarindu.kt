@@ -13,6 +13,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.example.candidate_account_uis.Algorithm.Calculator
 import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.candidateActivities.BaseActivity
 import com.example.candidate_account_uis.candidateActivities.ProfileSettingsActivity
@@ -169,7 +170,13 @@ class MainActivity_sarindu : BaseActivity(), communicator, NavigationView.OnNavi
                 startActivity(intent)
 
                 Toast.makeText(this@MainActivity_sarindu, "My Profile", Toast.LENGTH_SHORT).show()
-                print("I am working")
+            }
+
+            R.id.nav_my_cal -> {
+                val intent = Intent(this, Calculator::class.java)
+                startActivity(intent)
+
+                Toast.makeText(this@MainActivity_sarindu, "My Calculator", Toast.LENGTH_SHORT).show()
             }
 
             R.id.nav_sign_out -> {
