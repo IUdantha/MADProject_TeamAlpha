@@ -36,9 +36,6 @@ class ProfileSettingsActivity: AppCompatActivity() {
         val rePasswordButton = findViewById<Button>(R.id.rePassword)
         val delAccButton = findViewById<Button>(R.id.delAccount)
         val emailView = findViewById<TextView>(R.id.emailView)
-
-
-
         val settingsBackBtn = findViewById<ImageView>(R.id.settingsBackBtn)
 
 

@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.candidate_account_uis.R
+import com.example.candidate_account_uis.candidate.MainActivity_sarindu
 import com.example.candidate_account_uis.candidateActivities.ProfileSettingsActivity
 
 
@@ -23,6 +25,12 @@ class Calculator : AppCompatActivity() {
         val hourDay = findViewById<EditText>(R.id.hourDay)
         val calBtn = findViewById<Button>(R.id.calBtn)
         val calValue = findViewById<TextView>(R.id.calValue)
+        val settingsBackBtn = findViewById<ImageView>(R.id.calBackBtn)
+
+        settingsBackBtn.setOnClickListener(){
+            val thisIntent  = Intent(this,MainActivity_sarindu::class.java)
+            startActivity(thisIntent)
+        }
 
 
         // Set click listener for the Calculate button
