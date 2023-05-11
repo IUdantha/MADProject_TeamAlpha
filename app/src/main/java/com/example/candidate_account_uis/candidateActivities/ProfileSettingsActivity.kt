@@ -9,6 +9,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.candidate_account_uis.R
+import com.example.candidate_account_uis.candidate.HomeFragment
+import com.example.candidate_account_uis.candidate.MainActivity_sarindu
+import com.example.candidate_account_uis.candidate.ProfileFragment
 import com.example.candidate_account_uis.databinding.ActivitySignInBinding
 import com.example.candidate_account_uis.firebase.FirestoreClass
 import com.google.firebase.firestore.FirebaseFirestore
@@ -29,6 +32,14 @@ class ProfileSettingsActivity: AppCompatActivity() {
         val rePasswordButton = findViewById<Button>(R.id.rePassword)
         val delAccButton = findViewById<Button>(R.id.delAccount)
         val emailView = findViewById<TextView>(R.id.emailView)
+        val backbutton = findViewById<Button>(R.id.profilebackbutton)
+
+        backbutton.setOnClickListener {
+            val thisIntent = Intent(this, MainActivity_sarindu::class.java)
+            startActivity(thisIntent)
+        }
+
+
 
 
         nameButton.setOnClickListener {

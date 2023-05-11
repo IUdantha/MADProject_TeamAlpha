@@ -1,6 +1,8 @@
 package com.example.candidate_account_uis.candidate
 
+import android.content.ContentValues
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +11,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.candidate_account_uis.databinding.FragmentProfileBinding
+import com.example.candidate_account_uis.firebase.FirestoreClass
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 
 class ProfileFragment : Fragment() {
 
@@ -53,7 +57,7 @@ class ProfileFragment : Fragment() {
 
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
-        readData("amal")
+        readData()
 
         val btn1  : Button = binding.addEk1
         val btn2  : Button = binding.addEk2
@@ -62,6 +66,7 @@ class ProfileFragment : Fragment() {
         val textview1 : TextView = binding.experiencetextbox
         val textview2 : TextView = binding.skilltext
         val textview3 : TextView = binding.educationtext
+        val textview4 : TextView = binding.profiletextbox
 
         communicator = activity as communicator
 
@@ -75,18 +80,48 @@ class ProfileFragment : Fragment() {
             communicator.passData3(textview3.text.toString())
         }
 
-
         return binding.root
-
-
 
     }
 
-    private fun readData(userName: String) {
+    private fun readData() {
 
-        database = FirebaseDatabase.getInstance().getReference("UserproD")
+
+        val db = FirebaseFirestore.getInstance()
+
+        val collectionUsers = db.collection("users")
+        val nowUser = FirestoreClass().getCurrentUserID()
+
+        val query = collectionUsers.whereEqualTo("id", nowUser)
+
+        query.get().addOnSuccessListener { documents ->
+            if (documents.size() > 0) {
+                val document = documents.first()
+                val exp = document.getString("experience")
+                val skil = document.getString("skills")
+                val edu = document.getString("education")
+                val name = document.getString("name")
+                val email = document.getString("email")
+
+                Toast.makeText(activity, "successfully read", Toast.LENGTH_SHORT).show()
+
+                binding.experiencetextbox.text = exp.toString()
+                binding.skilltext.text = skil.toString()
+                binding.educationtext.text = edu.toString()
+                binding.profiletextbox.text = "$name\n$email"
+
+            } else {
+                Toast.makeText(activity, "User doesn't exist", Toast.LENGTH_SHORT).show()
+            }
+        }.addOnFailureListener { exception ->
+            Toast.makeText(activity, "Documents getting failed", Toast.LENGTH_SHORT).show()
+
+        }
+
+        //--------------------
+
+        /*database = FirebaseDatabase.getInstance().getReference("UserproD")
         database.child(userName).get().addOnSuccessListener {
-
 
             if(it.exists()){
                 val exp = it.child("experience").value
@@ -94,29 +129,20 @@ class ProfileFragment : Fragment() {
                 val edu = it.child("eduction").value
                 val name = it.child("name").value
 
-
                 Toast.makeText(activity, "successfully read", Toast.LENGTH_SHORT).show()
                 //binding.editTextText5.text.clear()
                 binding.experiencetextbox.text =exp.toString()
                 binding.skilltext.text =skil.toString()
                 binding.educationtext.text =edu.toString()
                 //binding.editTextText6.setText(name.toString())
-
-
-
             }
             else{
-
                 Toast.makeText(activity, "User doesn't exist", Toast.LENGTH_SHORT).show()
             }
-
-
         }.addOnFailureListener {
-
             Toast.makeText(activity, "failed", Toast.LENGTH_SHORT).show()
-
         }
-
+*/
     }
 
 
