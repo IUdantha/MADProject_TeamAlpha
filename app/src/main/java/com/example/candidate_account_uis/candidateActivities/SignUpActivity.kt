@@ -2,8 +2,11 @@ package com.example.candidate_account_uis.candidateActivities
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -20,6 +23,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.firestore.FirebaseFirestore
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -71,6 +75,9 @@ class SignUpActivity : AppCompatActivity() {
                                     // call the registerUser function of FirestoreClass to make an entry in the database.
                                     FirestoreClass().registerUser(this@SignUpActivity, user)
 
+                                    //added initial data to firestore
+                                    initialData()
+
                                     val intent = Intent(this, SignInActivity::class.java)
                                     startActivity(intent)
                                 } else {
@@ -104,6 +111,29 @@ class SignUpActivity : AppCompatActivity() {
         findViewById<ImageButton>(R.id.googlesigninbtn).setOnClickListener {
             signInGoogle()
         }
+    }
+
+    //initial data function
+    fun initialData(){
+
+        val db = FirebaseFirestore.getInstance()
+        val collectionUsers = db.collection("users")
+
+        val nowUser = FirestoreClass().getCurrentUserID()
+        val userDocRef = collectionUsers.document(nowUser)
+
+        val updates = hashMapOf<String, Any>(
+            "name" to "No name",
+            "image" to "https://firebasestorage.googleapis.com/v0/b/mad-candidate-dbs.appspot.com/o/images%2Fdefault_pro_img.png?alt=media&token=ca7f39d0-ddfe-472d-98c9-9845028f8dd4"
+        )
+
+        userDocRef.update(updates)
+            .addOnSuccessListener {
+                Log.d(ContentValues.TAG, "DocumentSnapshot successfully updated!")
+            }
+            .addOnFailureListener { e ->
+                Log.w(ContentValues.TAG, "Error updating document", e)
+            }
     }
 
     //google
