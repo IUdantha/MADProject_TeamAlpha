@@ -51,7 +51,7 @@ class CompanyChangePwActivity : AppCompatActivity() {
         }
 
         binding.cancelButton.setOnClickListener {
-            val intent = Intent(this, ComLogin::class.java)
+            val intent = Intent(this, CompanyProfileSettings::class.java)
             startActivity(intent)
         }
 
