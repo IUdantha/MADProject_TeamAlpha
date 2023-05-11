@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".company.CompanyInterviewActivity">
+    tools:context=".companyjobs.InterestedCandidates">
 
     <View
         android:id="@+id/upNav"
@@ -33,87 +33,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:text="Interview Details"
+        android:text="Interested Candidates"
         android:textColor="#041051"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/upNav"
         app:layout_constraintEnd_toEndOf="@+id/upNav"
-        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="@+id/upNav"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.361" />
-
-
-
-    <EditText
-        android:id="@+id/interviewT"
-        android:layout_width="318dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="44dp"
-        android:background="@drawable/rectangle_companyprofile"
-        android:hint="@string/t_tenter_interview_time"
-        android:elevation="5dp"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inteviewD"
-        android:paddingStart="12dp"/>
-
-    <EditText
-        android:id="@+id/editNote"
-        android:layout_width="314dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="66dp"
-        android:layout_marginEnd="48dp"
-        android:background="@drawable/rectangle_companyprofile"
-        android:hint="@string/t_tenter_note"
-        android:elevation="5dp"
-        android:paddingStart="12dp"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upNav" />
-
-    <EditText
-        android:id="@+id/inteviewD"
-        android:layout_width="317dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="45dp"
-        android:background="@drawable/rectangle_companyprofile"
-        android:hint="@string/t_tenter_interview_date"
-        android:elevation="5dp"
-        android:paddingStart="12dp"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editNote" />
-
-    <Button
-        android:id="@+id/sendButton"
-        android:layout_width="132dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="89dp"
-        android:layout_marginEnd="148dp"
-        android:backgroundTint="#00007F"
-        android:text="@string/send"
-        android:textColor="@color/white"
-        app:cornerRadius="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/interviewT" />
+        app:layout_constraintVertical_bias="0.313" />
 
     <ImageView
         android:id="@+id/homeIcon"
@@ -153,6 +82,30 @@
         app:layout_constraintEnd_toEndOf="@+id/bottomNav"
         app:layout_constraintHorizontal_bias="0.843"
         app:layout_constraintStart_toStartOf="@+id/bottomNav" />
+
+    <SearchView
+        android:id="@+id/comCandidateSearch"
+        android:layout_width="325dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/rectangle_1"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="@+id/upNav"
+        app:layout_constraintTop_toBottomOf="@+id/Heading" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/int_candidate_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNav" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
