@@ -19,20 +19,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-    <EditText
-        android:id="@+id/we_are_seeking22"
-        android:layout_width="315dp"
-        android:layout_height="wrap_content"
-        android:elevation="10dp"
-        android:hint="Experiences"
-        android:textColor="@color/text_color"
-        android:textSize="@dimen/text_para"
-        android:background="@drawable/rectangle_1"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_1" />
-
+        <EditText
+            android:id="@+id/we_are_seeking22"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_1"
+            android:elevation="10dp"
+            android:hint="Experiences"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_para"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+            app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+            app:layout_constraintTop_toTopOf="@+id/rectangle_1" />
 
     <TextView
         android:id="@+id/textView11"

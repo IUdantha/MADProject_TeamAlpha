@@ -45,6 +45,12 @@ class Experience_edit_frag : Fragment() {
         output3 = arguments?.getString("we_are_seeking22")
         textview3.text = output3
 
+        binding.backexp.setOnClickListener {
+
+            val transaction = activity?.supportFragmentManager?.beginTransaction()
+            transaction?.replace(R.id.frame_layout, ProfileFragment())?.commit()
+        }
+
         binding.saveexp.setOnClickListener {
 
             val exp = binding.weAreSeeking22.text.toString()

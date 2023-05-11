@@ -33,6 +33,12 @@ class Skills_edit_frag : Fragment() {
         output2 = arguments?.getString("we_are_seeking222")
         textview2.text = output2
 
+        binding.backskill.setOnClickListener {
+
+            val transaction = activity?.supportFragmentManager?.beginTransaction()
+            transaction?.replace(R.id.frame_layout, ProfileFragment())?.commit()
+        }
+
         binding.saveskill.setOnClickListener {
 
             val skil = binding.weAreSeeking222.text.toString()

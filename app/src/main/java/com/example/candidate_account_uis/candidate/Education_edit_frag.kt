@@ -34,6 +34,12 @@ class Education_edit_frag : Fragment() {
         output1 = arguments?.getString("we_are_seeking2")
         textview.text = output1
 
+        binding.backedu.setOnClickListener {
+
+            val transaction = activity?.supportFragmentManager?.beginTransaction()
+            transaction?.replace(R.id.frame_layout, ProfileFragment())?.commit()
+        }
+
         binding.saveedu.setOnClickListener {
 
             val edu = binding.weAreSeeking2.text.toString()
