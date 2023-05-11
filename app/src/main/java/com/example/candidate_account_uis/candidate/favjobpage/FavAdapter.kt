@@ -27,6 +27,7 @@ class FavAdapter() : RecyclerView.Adapter<FavAdapter.FavViewHolder>() {
     override fun onBindViewHolder(holder: FavViewHolder, position: Int) {
 
         val currentitem = favJobList[position]
+
         holder.title.text = currentitem.title
         holder.company.text = currentitem.company
         holder.description.text = currentitem.description
@@ -34,8 +35,9 @@ class FavAdapter() : RecyclerView.Adapter<FavAdapter.FavViewHolder>() {
         holder.applybutton.setOnClickListener(object :View.OnClickListener{
 
             override fun onClick(v: View?) {
-            val activity=v!!.context as AppCompatActivity
-            val applicationFormFragment = ApplicationFormFragment()
+                val activity=v!!.context as AppCompatActivity
+                val applicationFormFragment = ApplicationFormFragment()
+
                 activity.supportFragmentManager.beginTransaction().replace(R.id.frame_layout,applicationFormFragment).commit()
             }
 
