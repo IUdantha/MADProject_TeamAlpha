@@ -15,7 +15,6 @@ import com.example.candidate_account_uis.candidate.HomeFragment
 import com.example.candidate_account_uis.candidate.MainActivity_sarindu
 import com.example.candidate_account_uis.candidate.ProfileFragment
 
-import com.example.candidate_account_uis.candidate.MainActivity_sarindu
 
 import com.example.candidate_account_uis.databinding.ActivitySignInBinding
 import com.example.candidate_account_uis.firebase.FirestoreClass
