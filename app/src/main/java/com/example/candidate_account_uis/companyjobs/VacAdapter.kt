@@ -28,7 +28,7 @@ class VacAdapter(private val vacList:ArrayList<VacancyModel>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentEmp = vacList[position]
-        holder.tvVName.text = currentEmp.jbRl
+        holder.tvVName.text = currentEmp.jobTitle
     }
 
     override fun getItemCount(): Int {

@@ -144,12 +144,19 @@ class MainActivity_sarindu : BaseActivity(), communicator, NavigationView.OnNavi
 
         val query = collectionUsers.whereEqualTo("id", nowUser)
 
+        val profileImageSide = headerView.findViewById<ImageView>(R.id.profileImageSide)
+
         query.get().addOnSuccessListener { documents ->
             if (documents.size() > 0) {
                 val document = documents.first()
                 val name = document.getString("name")
-                val status = document.getString("status")
-                val email = document.getString("email")
+                val imagePath = document.getString("image")
+
+
+                Glide.with(this)
+                    .load(imagePath)
+                    .circleCrop() // Apply circular shape transformation
+                    .into(profileImageSide)
                 navUsername.text = name //user.name
             } else {
                 Log.d(ContentValues.TAG, "No matching documents.")

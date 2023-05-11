@@ -1,9 +1,9 @@
 package com.example.candidate_account_uis.companyjobs
 
     data class VacancyModel(
-        var vid: String? = null,
-        var jbRl: String? = null,
-        var jobDes: String? = null,
-        var comOver: String?=null,
-        var sal: String?=null
+        var vacancyID: String? = null,
+        var jobTitle: String? = null,
+        var jobDescription: String? = null,
+        var companyOverview: String?=null,
+        var salary: String?=null
     )

@@ -16,7 +16,7 @@ class VacancyAdd : AppCompatActivity() {
     private lateinit var jobRole: EditText
     private lateinit var jobDesc: EditText
     private lateinit var companyOver: EditText
-    private lateinit var salary: EditText
+    private lateinit var salary1: EditText
     private lateinit var btnSubmitData: Button
     private lateinit var btnCancelData: Button
 
@@ -31,7 +31,7 @@ class VacancyAdd : AppCompatActivity() {
         jobRole = findViewById(R.id.textViewJobRoleFill)
         jobDesc = findViewById(R.id.textViewJobDesFill)
         companyOver = findViewById(R.id.textViewOverViewFill)
-        salary = findViewById(R.id.textViewJobRoleFill2)
+        salary1 = findViewById(R.id.textViewJobRoleFill2)
         btnSubmitData = findViewById(R.id.submit)
         btnCancelData = findViewById(R.id.button7)
 
@@ -48,7 +48,7 @@ class VacancyAdd : AppCompatActivity() {
         val jbRl = jobRole.text.toString()
         val jobDes = jobDesc.text.toString()
         val comOver = companyOver.text.toString()
-        val sal = salary.text.toString()
+        val sal = salary1.text.toString()
 
         if (jbRl.isEmpty()) {
             jobRole.error = "Please fill the field"
@@ -61,7 +61,7 @@ class VacancyAdd : AppCompatActivity() {
         }
 
         if (sal.isEmpty()) {
-            salary.error = "Please fill the field"
+            salary1.error = "Please fill the field"
         }
         else {
 
@@ -79,7 +79,7 @@ class VacancyAdd : AppCompatActivity() {
                     jobRole.text.clear()
                     jobDesc.text.clear()
                     companyOver.text.clear()
-                    salary.text.clear()
+                    salary1.text.clear()
 
                 }.addOnFailureListener { err ->
                     Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
