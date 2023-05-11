@@ -6,9 +6,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.candidate_account_uis.R
+import com.example.candidate_account_uis.candidate.MainActivity_sarindu
 import com.example.candidate_account_uis.databinding.ActivitySignInBinding
 import com.example.candidate_account_uis.firebase.FirestoreClass
 import com.google.firebase.firestore.FirebaseFirestore
@@ -29,6 +31,7 @@ class ProfileSettingsActivity: AppCompatActivity() {
         val rePasswordButton = findViewById<Button>(R.id.rePassword)
         val delAccButton = findViewById<Button>(R.id.delAccount)
         val emailView = findViewById<TextView>(R.id.emailView)
+        val settingsBackBtn = findViewById<ImageView>(R.id.settingsBackBtn)
 
 
         nameButton.setOnClickListener {
@@ -50,6 +53,13 @@ class ProfileSettingsActivity: AppCompatActivity() {
             val thisIntent = Intent(this, ProfileSettingsDeleteActivity::class.java)
             startActivity(thisIntent)
         }
+
+        settingsBackBtn.setOnClickListener {
+            val thisIntent = Intent(this, MainActivity_sarindu::class.java)
+            startActivity(thisIntent)
+        }
+
+
 
         //Get database instance
         val db = FirebaseFirestore.getInstance()
