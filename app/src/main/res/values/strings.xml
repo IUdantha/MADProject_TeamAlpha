@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Candidate_Account_UIs</string>
+    <string name="app_name">Job Plaza</string>
 
     <!--    Sign in-->
     <string name="sign_in_btn">Sign In</string>
