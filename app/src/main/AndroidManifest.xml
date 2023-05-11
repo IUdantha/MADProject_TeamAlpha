@@ -78,7 +78,8 @@
 
         <meta-data
             android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" /> <!-- facebook -->
+            android:resource="@array/preloaded_fonts" />
+        <!-- facebook -->
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -94,7 +95,8 @@
 
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
-        </activity> <!-- Azmarah -->
+        </activity>
+        <!-- Azmarah -->
         <activity
             android:name=".company.CompanyEditProfileActivity"
             android:exported="true" />
@@ -127,7 +129,8 @@
             android:exported="true" />
         <activity
             android:name=".company.CompInterviewSendSuccessActivity"
-            android:exported="true" /> <!-- sarindu -->
+            android:exported="true" />
+        <!-- sarindu -->
         <activity
             android:name=".candidate.MainActivity_sarindu"
             android:exported="true"/>

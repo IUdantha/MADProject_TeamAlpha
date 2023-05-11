@@ -1,6 +1,8 @@
 package com.example.candidate_account_uis.candidate
 
+import android.app.ProgressDialog
 import android.content.ContentValues
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,6 +13,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.candidate_account_uis.candidateActivities.ProfileSettingsActivity
 import com.bumptech.glide.Glide
 import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.databinding.FragmentProfileBinding
@@ -69,7 +72,11 @@ class ProfileFragment : Fragment() {
         val textview1 : TextView = binding.experiencetextbox
         val textview2 : TextView = binding.skilltext
         val textview3 : TextView = binding.educationtext
-        val textview4 : TextView = binding.profiletextbox
+
+        binding.vector11.setOnClickListener {
+            val thisIntent = Intent(activity, ProfileSettingsActivity::class.java)
+            startActivity(thisIntent)
+        }
 
         communicator = activity as communicator
 
@@ -91,6 +98,10 @@ class ProfileFragment : Fragment() {
 
     private fun readData() {
 
+        val progressDialog = ProgressDialog(activity)
+        progressDialog.setMessage("Loading ....")
+        progressDialog.setCancelable(false)
+        progressDialog.show()
 
         val db = FirebaseFirestore.getInstance()
 
@@ -122,6 +133,8 @@ class ProfileFragment : Fragment() {
                     .load(imagePath)
                     .circleCrop() // Apply circular shape transformation
                     .into(binding.proImg)
+
+                progressDialog.cancel()
 
             } else {
                 Toast.makeText(activity, "User doesn't exist", Toast.LENGTH_SHORT).show()
