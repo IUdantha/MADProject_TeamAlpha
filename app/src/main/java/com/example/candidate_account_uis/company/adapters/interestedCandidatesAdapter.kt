@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.candidate.ApplicationData
 import com.example.candidate_account_uis.company.CompanyDeleteAccountActivity
@@ -28,6 +30,7 @@ class interestedCandidatesAdapter:RecyclerView.Adapter<interestedCandidatesAdapt
         val candidateComEmail: TextView = view.findViewById(R.id.candidateComEmail)
         val candidateComContact: TextView = view.findViewById(R.id.candidateComContact)
         val candidateComUni: TextView = view.findViewById(R.id.candidateComUni)
+        val candidateComPic: ImageView = view.findViewById(R.id.candidateComPic)
 
         init {
             candidateComView.setOnClickListener {
@@ -58,6 +61,11 @@ class interestedCandidatesAdapter:RecyclerView.Adapter<interestedCandidatesAdapt
         holder.candidateComEmail.text = currentItem.email
         holder.candidateComContact.text = currentItem.contactnumber
         holder.candidateComUni.text = currentItem.university
+        Glide.with(context)
+            .load(currentItem.imagepath)
+            .circleCrop()
+            .into(holder.candidateComPic)
+
     }
     override fun getItemCount(): Int {
         return if(::data.isInitialized) data.size else 0
