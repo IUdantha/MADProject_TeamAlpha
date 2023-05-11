@@ -23,13 +23,13 @@
             android:layout_marginBottom="30dp"
             android:contentDescription="image_3"
             android:src="@drawable/image_3"
-            app:layout_constraintBottom_toTopOf="@+id/isuru_udantha"
+            app:layout_constraintBottom_toTopOf="@+id/profiletextbox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/isuru_udantha"
+        android:id="@+id/profiletextbox"
         android:layout_width="201dp"
         android:layout_height="62dp"
         android:layout_gravity="center_horizontal|center"
@@ -37,7 +37,6 @@
         android:layout_marginEnd="105dp"
         android:layout_marginBottom="50dp"
         android:gravity="center"
-        android:text="@string/isuru_udantha"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/group_4"
