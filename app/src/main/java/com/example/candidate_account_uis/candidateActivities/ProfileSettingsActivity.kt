@@ -37,13 +37,6 @@ class ProfileSettingsActivity: AppCompatActivity() {
         val delAccButton = findViewById<Button>(R.id.delAccount)
         val emailView = findViewById<TextView>(R.id.emailView)
 
-        val backbutton = findViewById<Button>(R.id.profilebackbutton)
-
-        backbutton.setOnClickListener {
-            val thisIntent = Intent(this, MainActivity_sarindu::class.java)
-            startActivity(thisIntent)
-        }
-
 
 
         val settingsBackBtn = findViewById<ImageView>(R.id.settingsBackBtn)
@@ -112,10 +105,6 @@ class ProfileSettingsActivity: AppCompatActivity() {
 //                // Handle failed query result
 //                Log.w(TAG, "Error getting documents.", exception)
 //            }
-
-
-
-
 
 
     }
