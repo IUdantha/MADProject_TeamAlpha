@@ -8,16 +8,16 @@
     android:orientation="vertical"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_user_image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="image"
-        android:src="@drawable/ic_user_place_holder"
-        app:civ_border_color="@android:color/white"
-        app:civ_border_width="1dp" />
+    <ImageView
+        android:id="@+id/profileImageSide"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
 
     <TextView
         android:id="@+id/tv_username"
@@ -25,9 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="10dp"
-        android:text="@string/app_name"
+        android:text="No name"
         android:textColor="#F9FBE7"
         android:textSize="18sp" />
 
