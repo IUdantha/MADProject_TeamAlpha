@@ -1,20 +1,17 @@
 package com.example.candidate_account_uis.candidate.favjobpage
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.candidate.ApplicationFormFragment
-import com.example.candidate_account_uis.companyjobs.VacAdapter
-import com.example.candidate_account_uis.companyjobs.VacancyFetching
 import com.google.firebase.database.FirebaseDatabase
 
-class FavAdapter : RecyclerView.Adapter<FavAdapter.FavViewHolder>() {
+class FavAdapter() : RecyclerView.Adapter<FavAdapter.FavViewHolder>() {
 
     private val favJobList = ArrayList<FavJobModel>()
 
@@ -30,10 +27,19 @@ class FavAdapter : RecyclerView.Adapter<FavAdapter.FavViewHolder>() {
     override fun onBindViewHolder(holder: FavViewHolder, position: Int) {
 
         val currentitem = favJobList[position]
-
         holder.title.text = currentitem.title
         holder.company.text = currentitem.company
         holder.description.text = currentitem.description
+
+        holder.applybutton.setOnClickListener(object :View.OnClickListener{
+
+            override fun onClick(v: View?) {
+            val activity=v!!.context as AppCompatActivity
+            val applicationFormFragment = ApplicationFormFragment()
+                activity.supportFragmentManager.beginTransaction().replace(R.id.frame_layout,applicationFormFragment).commit()
+            }
+
+        })
 
     }
 
@@ -51,7 +57,7 @@ class FavAdapter : RecyclerView.Adapter<FavAdapter.FavViewHolder>() {
 //-----------------------------------------------------------------
 
 
-    class  FavViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+    inner class  FavViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
         val title : TextView = itemView.findViewById(R.id.job_title)
         val company : TextView = itemView.findViewById(R.id.job_company)
@@ -59,12 +65,19 @@ class FavAdapter : RecyclerView.Adapter<FavAdapter.FavViewHolder>() {
 
         val applybutton : Button = itemView.findViewById(R.id.Fav_Job_apply)
 
+        init {
+            applybutton.setOnClickListener{
+                //deleteRecord()
+
+            }
+        }
+
+
+
     }
 
-
-
-    private fun deleteRecord(title: String) {
-        val dbRef = FirebaseDatabase.getInstance().getReference("jobs").child(title)
+    private fun deleteRecord(name1 :String) {
+        val dbRef = FirebaseDatabase.getInstance().getReference("jobs").child(name1)
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
@@ -73,7 +86,7 @@ class FavAdapter : RecyclerView.Adapter<FavAdapter.FavViewHolder>() {
 //            val intent = Intent(this, VacancyFetching::class.java)
 //            finish()
 //            startActivity(intent)
-        }.addOnFailureListener{ error ->
+        }.addOnFailureListener{
             //Toast.makeText(this, "Deleting Err ${error.message}", Toast.LENGTH_LONG).show()
         }
 
