@@ -27,7 +27,7 @@
 
         <TextView
         android:id="@+id/profiletextbox"
-        android:layout_width="201dp"
+        android:layout_width="wrap_content"
         android:layout_height="62dp"
         android:layout_gravity="center_horizontal|center"
         android:layout_marginStart="105dp"
