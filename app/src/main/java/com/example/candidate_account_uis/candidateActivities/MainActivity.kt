@@ -76,16 +76,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         val nav_view: NavigationView = findViewById(R.id.nav_view)
         val headerView = nav_view.getHeaderView(0)
 
-        // The instance of the user image of the navigation view.
-        val navUserImage = headerView.findViewById<ImageView>(R.id.iv_user_image)
-
-        // Load the user image in the ImageView.
-        Glide
-            .with(this@MainActivity)
-            .load(user.image) // URL of the image
-            .centerCrop() // Scale type of the image.
-            .placeholder(R.drawable.ic_user_place_holder) // A default place holder
-            .into(navUserImage) // the view in which the image will be loaded.
 
         // The instance of the user name TextView of the navigation view.
         val navUsername = headerView.findViewById<TextView>(R.id.tv_username)

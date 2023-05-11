@@ -56,10 +56,11 @@ class VacancyFetching: AppCompatActivity() {
                             val intent = Intent(this@VacancyFetching, VacancyDetailsActivity::class.java)
 
                             //put extras
-                            intent.putExtra("vid", vacList[position].vid)
-                            intent.putExtra("jbRl", vacList[position].jbRl)
-                            intent.putExtra("jobDes", vacList[position].jobDes)
-                            intent.putExtra("comOver", vacList[position].comOver)
+                            intent.putExtra("vid", vacList[position].vacancyID)
+                            intent.putExtra("jbRl", vacList[position].jobTitle)
+                            intent.putExtra("jobDes", vacList[position].jobDescription)
+                            intent.putExtra("comOver", vacList[position].companyOverview)
+                            intent.putExtra("sal", vacList[position].salary)
                             startActivity(intent)
 
                         }

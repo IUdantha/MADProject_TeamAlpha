@@ -7,9 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
+import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.databinding.FragmentProfileBinding
 import com.example.candidate_account_uis.firebase.FirestoreClass
 import com.google.firebase.database.DatabaseReference
@@ -82,6 +85,8 @@ class ProfileFragment : Fragment() {
 
         return binding.root
 
+
+
     }
 
     private fun readData() {
@@ -102,13 +107,21 @@ class ProfileFragment : Fragment() {
                 val edu = document.getString("education")
                 val name = document.getString("name")
                 val email = document.getString("email")
+                val imagePath = document.getString("image")
 
                 Toast.makeText(activity, "successfully read", Toast.LENGTH_SHORT).show()
+
+
 
                 binding.experiencetextbox.text = exp.toString()
                 binding.skilltext.text = skil.toString()
                 binding.educationtext.text = edu.toString()
                 binding.profiletextbox.text = "$name\n$email"
+
+                Glide.with(this)
+                    .load(imagePath)
+                    .circleCrop() // Apply circular shape transformation
+                    .into(binding.proImg)
 
             } else {
                 Toast.makeText(activity, "User doesn't exist", Toast.LENGTH_SHORT).show()

@@ -14,21 +14,18 @@
 
 
         <ImageView
-            android:id="@+id/image_3"
-            android:layout_width="97dp"
-            android:layout_height="102dp"
-            android:layout_marginStart="157dp"
+            android:id="@+id/proImg"
+            android:layout_width="95dp"
+            android:layout_height="107dp"
             android:layout_marginTop="50dp"
-            android:layout_marginEnd="157dp"
             android:layout_marginBottom="30dp"
-            android:contentDescription="image_3"
-            android:src="@drawable/image_3"
+            android:src="@drawable/ic_baseline_person_24"
             app:layout_constraintBottom_toTopOf="@+id/profiletextbox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+        <TextView
         android:id="@+id/profiletextbox"
         android:layout_width="201dp"
         android:layout_height="62dp"
