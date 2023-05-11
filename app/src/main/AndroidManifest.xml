@@ -8,15 +8,13 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/main_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/main_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Candidate_Account_UIs"
         tools:targetApi="31">
-        <activity
-            android:name=".candidate.FavouriteJobsComponent"
-            android:exported="false" />
+
         <activity
             android:name=".candidateActivities.SplashActivity"
             android:exported="true">
@@ -30,6 +28,22 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+
+        <activity
+            android:name=".company.CompanySplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
         <activity
             android:name=".candidateActivities.ResetPasswordActivity"
             android:exported="false">
@@ -64,7 +78,8 @@
 
         <meta-data
             android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" /> <!-- facebook -->
+            android:resource="@array/preloaded_fonts" />
+        <!-- facebook -->
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -80,7 +95,8 @@
 
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
-        </activity> <!-- Azmarah -->
+        </activity>
+        <!-- Azmarah -->
         <activity
             android:name=".company.CompanyEditProfileActivity"
             android:exported="true" />
@@ -98,25 +114,13 @@
             android:exported="true" />
         <activity
             android:name=".company.CompanyDetailForm"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".company.CompanyInterviewActivity"
             android:exported="true" />
         <activity
             android:name=".company.CompanyProfile"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".company.CompanyProfileSettings"
             android:exported="true" />
@@ -125,52 +129,27 @@
             android:exported="true" />
         <activity
             android:name=".company.CompInterviewSendSuccessActivity"
-            android:exported="true" /> <!-- sarindu -->
+            android:exported="true" />
+        <!-- sarindu -->
         <activity
             android:name=".candidate.MainActivity_sarindu"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity> <!-- udeshani -->
+            android:exported="true"/>
+        <!-- udeshani -->
         <activity
             android:name=".companyjobs.MainActivity_udeshani"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".companyjobs.VacancyAdd"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".companyjobs.VacancyFetching"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".companyjobs.VacancyDetailsActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
+        <activity
+            android:name=".companyjobs.InterestedCandidates"
+            android:exported="true" />
     </application>
 
 </manifest>

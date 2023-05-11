@@ -45,17 +45,17 @@
         app:srcCompat="@drawable/bell" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/profileImg"
         android:layout_width="151dp"
         android:layout_height="192dp"
         android:layout_marginTop="17dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view"
-        app:srcCompat="@drawable/pro_pic" />
+        app:srcCompat="@drawable/ic_baseline_person_24" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/profileImgEdit"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="256dp"
@@ -142,7 +142,7 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/profileImg" />
 
 
     <ImageView

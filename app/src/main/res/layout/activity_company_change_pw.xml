@@ -56,106 +56,36 @@
         app:layout_constraintStart_toStartOf="@+id/upNav"
         app:layout_constraintTop_toBottomOf="@+id/Heading" />
 
-    <TextView
-        android:id="@+id/OldPassword"
-        android:layout_width="295dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="12dp"
-        android:text="@string/enter_old_password"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/editoldPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextSizeCheck" />
 
     <TextView
-        android:id="@+id/NewPassword"
+        android:id="@+id/chEmail"
         android:layout_width="306dp"
         android:layout_height="23dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="9dp"
-        android:text="@string/enter_new_password"
+        android:layout_marginBottom="32dp"
+        android:text="Enter Email"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/editnewPassword"
+        app:layout_constraintBottom_toTopOf="@+id/changePwEmail"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck,TextSizeCheck" />
 
-
-    <TextView
-        android:id="@+id/RnewPassword"
-        android:layout_width="291dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginEnd="79dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/re_enter_new_password"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/editrnewPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextSizeCheck" />
-
     <EditText
-        android:id="@+id/editrnewPassword"
-        android:layout_width="314dp"
+        android:id="@+id/changePwEmail"
+        android:layout_width="318dp"
         android:layout_height="48dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="112dp"
+        android:layout_marginBottom="98dp"
         android:background="@drawable/rectangle_companyprofile"
         android:elevation="5dp"
-        android:inputType="textPassword"
-        android:hint="@string/t_tre_enter_new_password"
+        android:hint="Enter Email"
+        android:importantForAutofill="no"
+        android:inputType="text"
         android:paddingStart="12dp"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/cancelButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no"
-        tools:ignore="RtlSymmetry" />
-
-    <EditText
-        android:id="@+id/editoldPassword"
-        android:layout_width="317dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginBottom="33dp"
-        android:background="@drawable/rectangle_companyprofile"
-        android:hint="@string/t_tenter_old_password"
-        android:elevation="5dp"
-        android:paddingStart="12dp"
-        android:textSize="14sp"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/NewPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no"
-        tools:ignore="RtlSymmetry" />
-
-    <EditText
-        android:id="@+id/editnewPassword"
-        android:layout_width="318dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/rectangle_companyprofile"
-        android:elevation="5dp"
-        android:inputType="textPassword"
-        android:hint="@string/t_tenter_new_password"
-        android:paddingStart="12dp"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/RnewPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no"
         tools:ignore="RtlSymmetry" />
 
     <ImageView
@@ -163,24 +93,24 @@
         android:layout_width="34dp"
         android:layout_height="33dp"
         android:layout_marginBottom="24dp"
+        android:contentDescription="@string/HomeIcon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bottomNav"
         app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/vector55"
-        android:contentDescription="@string/HomeIcon" />
+        app:srcCompat="@drawable/vector55" />
 
     <ImageView
         android:id="@+id/FormIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:contentDescription="@string/FormIcon"
         app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
         app:layout_constraintEnd_toEndOf="@+id/bottomNav"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/bottomNav"
-        app:srcCompat="@drawable/vector"
-        android:contentDescription="@string/FormIcon"/>
+        app:srcCompat="@drawable/vector" />
 
 
     <ImageView
@@ -216,25 +146,25 @@
         android:layout_height="48dp"
         android:layout_marginStart="47dp"
         android:layout_marginEnd="56dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="168dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/cancel"
-        app:cornerRadius="8dp"
         android:textColor="#000075"
+        app:cornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNav"
-        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintEnd_toStartOf="@+id/resetButton"
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="#00007F"
         app:strokeWidth="2dp" />
 
     <Button
-        android:id="@+id/saveButton"
+        android:id="@+id/resetButton"
         android:layout_width="132dp"
         android:layout_height="48dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="168dp"
         android:backgroundTint="#00007F"
-        android:text="@string/save"
+        android:text="Reset"
         android:textColor="@color/white"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNav"

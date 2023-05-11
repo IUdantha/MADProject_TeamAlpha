@@ -44,90 +44,103 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.506" />
 
+
     <Button
         android:id="@+id/pw"
         android:layout_width="316dp"
         android:layout_height="53dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginEnd="48dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="#FCFDFD"
         android:text="@string/t_tchange_password"
-        app:cornerRadius="8dp"
         android:textAlignment="center"
         android:textColor="#0E0E80"
         android:textSize="@dimen/buttonText"
+        app:cornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@+id/update"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="#071561"
         app:strokeWidth="1dp" />
 
+    <Button
+        android:id="@+id/signOut"
+        android:layout_width="316dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="138dp"
+        android:backgroundTint="#FCFDFD"
+        android:text="Sign Out"
+        android:textAlignment="center"
+        android:textColor="#0E0E80"
+        android:textSize="@dimen/buttonText"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#071561"
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/update"
         android:layout_width="316dp"
         android:layout_height="53dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginEnd="48dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="#FCFDFD"
-        app:cornerRadius="8dp"
         android:text="@string/t_tupdate_my_profile"
-        android:textSize="@dimen/buttonText"
         android:textAlignment="center"
         android:textColor="#0E0E80"
-        app:strokeColor="#071561"
-        app:strokeWidth="1dp"
+        android:textSize="@dimen/buttonText"
+        app:cornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@+id/delete"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#071561"
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/delete"
         android:layout_width="316dp"
         android:layout_height="53dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="#FCFDFD"
         android:text="@string/t_tdelete_my_account"
-        app:cornerRadius="8dp"
-        android:textSize="@dimen/buttonText"
         android:textAlignment="center"
         android:textColor="#0E0E80"
+        android:textSize="@dimen/buttonText"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/signOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="#071561"
         app:strokeWidth="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck" />
-
-
 
     <ImageView
         android:id="@+id/homeIcon"
         android:layout_width="34dp"
         android:layout_height="33dp"
         android:layout_marginBottom="24dp"
+        android:contentDescription="@string/HomeIcon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bottomNav"
         app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/vector55"
-        android:contentDescription="@string/HomeIcon" />
+        app:srcCompat="@drawable/vector55" />
 
     <ImageView
         android:id="@+id/FormIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:contentDescription="@string/FormIcon"
         app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
         app:layout_constraintEnd_toEndOf="@+id/bottomNav"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/bottomNav"
-        app:srcCompat="@drawable/vector"
-        android:contentDescription="@string/FormIcon" />
+        app:srcCompat="@drawable/vector" />
 
 
     <ImageView
@@ -143,43 +156,18 @@
         app:srcCompat="@drawable/bell" />
 
     <ImageView
-        android:id="@+id/editPencil"
-        android:layout_width="18dp"
-        android:layout_height="16dp"
-        android:layout_marginBottom="416dp"
-        android:contentDescription="@string/EditPencil"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/pencil"
-        tools:ignore="ImageContrastCheck" />
-
-    <ImageView
         android:id="@+id/ProfileIcon"
         android:layout_width="38dp"
         android:layout_height="33dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/rectangle_8_shape"
+        android:contentDescription="@string/ProfileIcon"
         android:padding="7dp"
         android:src="@drawable/vector_ek6"
         app:layout_constraintBottom_toBottomOf="@+id/bottomNav"
         app:layout_constraintEnd_toEndOf="@+id/bottomNav"
         app:layout_constraintHorizontal_bias="0.873"
-        app:layout_constraintStart_toStartOf="@+id/bottomNav"
-        android:contentDescription="@string/ProfileIcon" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="130dp"
-        android:layout_height="127dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginBottom="56dp"
-        android:contentDescription="@string/EditPencil"
-        android:src="@drawable/newlogo"
-        app:layout_constraintBottom_toTopOf="@+id/pw"
-        app:layout_constraintEnd_toStartOf="@+id/editPencil"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/bottomNav" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

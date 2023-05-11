@@ -63,27 +63,27 @@ class VacancyAdd : AppCompatActivity() {
         if (sal.isEmpty()) {
             salary.error = "Please fill the field"
         }
+        else {
 
-        val vid = dbRef.push().key!!
+            val vid = dbRef.push().key!!
 
-        val vacancy = VacancyModel(vid , jbRl , jobDes , comOver, sal)
+            val vacancy = VacancyModel(vid, jbRl, jobDes, comOver, sal)
 
-        dbRef.child(vid).setValue(vacancy)
-            .addOnCompleteListener{
-                Toast.makeText(this , "Vacancy added successfully",Toast.LENGTH_LONG).show()
-                val intent = Intent(this, VacancyFetching::class.java)
-                startActivity(intent)
-
-
+            dbRef.child(vid).setValue(vacancy)
+                .addOnCompleteListener {
+                    Toast.makeText(this, "Vacancy added successfully", Toast.LENGTH_LONG).show()
+                    val intent = Intent(this, VacancyFetching::class.java)
+                    startActivity(intent)
 
 
-                jobRole.text.clear()
-                jobDesc.text.clear()
-                companyOver.text.clear()
-                salary.text.clear()
+                    jobRole.text.clear()
+                    jobDesc.text.clear()
+                    companyOver.text.clear()
+                    salary.text.clear()
 
-            }.addOnFailureListener{err ->
-                Toast.makeText(this,"Error ${err.message}", Toast.LENGTH_LONG).show()
-            }
+                }.addOnFailureListener { err ->
+                    Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
+                }
+        }
     }
 }
