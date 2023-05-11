@@ -5,14 +5,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.candidateActivities.ProfileSettingsActivity
 import com.example.candidate_account_uis.candidateActivities.SignUpActivity
 import com.example.candidate_account_uis.company.entities.companyDetails
+import com.example.candidate_account_uis.companyjobs.InterestedCandidates
+import com.example.candidate_account_uis.companyjobs.VacancyAdd
 import com.example.candidate_account_uis.firebase.FirestoreClass
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -103,5 +103,26 @@ class CompanyDeleteAccountActivity : AppCompatActivity() {
                 Log.w(ContentValues.TAG, "Error getting user data", databaseError.toException())
             }
         })
+
+
+        //navigation buttons
+        val homeIcon = findViewById<ImageView>(R.id.homeIcon)
+        homeIcon.setOnClickListener(View.OnClickListener() {
+            val intent = Intent(this, InterestedCandidates::class.java)
+            startActivity(intent)
+        })
+
+        val FormIcon = findViewById<ImageView>(R.id.FormIcon)
+        FormIcon.setOnClickListener(View.OnClickListener() {
+            val intent = Intent(this, VacancyAdd::class.java)
+            startActivity(intent)
+        })
+
+        val ProfileIcon = findViewById<ImageView>(R.id.ProfileIcon)
+        ProfileIcon.setOnClickListener(View.OnClickListener() {
+            val intent = Intent(this, CompanyProfile::class.java)
+            startActivity(intent)
+        })
+
     }
 }

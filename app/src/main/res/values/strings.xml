@@ -224,4 +224,9 @@
     <string name="calHeading">Work Hour Calculator</string>
     <string name="calButton">Calculate</string>
     <string name="calValue">Estimated Salary is: </string>
+    <string name="com_contact_">0753905674</string>
+    <string name="com_email_text">udeshanisenevirathne3478@gmail.com</string>
+    <string name="com_candidate_name_text">Udeshani Senevirathne</string>
+    <string name="com_candidate_uni_text">University of Moratuwa Colombo</string>
+    <string name="profile_pic_content">TODO</string>
 </resources>

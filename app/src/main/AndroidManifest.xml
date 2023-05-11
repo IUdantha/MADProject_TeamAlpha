@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Candidate_Account_UIs"
         tools:targetApi="31">
-    
+
         <activity
             android:name=".candidateActivities.SplashActivity"
             android:exported="true">
@@ -28,6 +28,22 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+
+        <activity
+            android:name=".company.CompanySplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
         <activity
             android:name=".candidateActivities.ResetPasswordActivity"
             android:exported="false">
@@ -58,13 +74,7 @@
         <activity android:name=".candidateActivities.ProfileSettingsDeleteActivity" />
         <activity
             android:name=".Algorithm.Calculator"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
@@ -102,13 +112,7 @@
             android:exported="true" />
         <activity
             android:name=".company.CompanyDetailForm"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".company.CompanyInterviewActivity"
             android:exported="true" />

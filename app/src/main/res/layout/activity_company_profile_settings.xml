@@ -49,8 +49,7 @@
         android:id="@+id/pw"
         android:layout_width="316dp"
         android:layout_height="53dp"
-        android:layout_marginTop="169dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="#FCFDFD"
         android:text="@string/t_tchange_password"
         android:textAlignment="center"
@@ -59,20 +58,18 @@
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@+id/update"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upNav"
         app:strokeColor="#071561"
         app:strokeWidth="1dp" />
 
-
     <Button
-        android:id="@+id/delete"
+        android:id="@+id/signOut"
         android:layout_width="316dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="178dp"
+        android:layout_marginBottom="138dp"
         android:backgroundTint="#FCFDFD"
-        android:text="@string/t_tdelete_my_account"
+        android:text="Sign Out"
         android:textAlignment="center"
         android:textColor="#0E0E80"
         android:textSize="@dimen/buttonText"
@@ -82,14 +79,13 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="#071561"
-        app:strokeWidth="1dp"
-        tools:ignore="TextContrastCheck" />
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/update"
         android:layout_width="316dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="#FCFDFD"
         android:text="@string/t_tupdate_my_profile"
         android:textAlignment="center"
@@ -98,10 +94,29 @@
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@+id/delete"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="#071561"
         app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="316dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#FCFDFD"
+        android:text="@string/t_tdelete_my_account"
+        android:textAlignment="center"
+        android:textColor="#0E0E80"
+        android:textSize="@dimen/buttonText"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/signOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#071561"
+        app:strokeWidth="1dp"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/homeIcon"

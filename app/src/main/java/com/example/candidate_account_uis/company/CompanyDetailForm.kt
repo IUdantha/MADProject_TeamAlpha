@@ -9,7 +9,6 @@ import android.widget.Toast
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity
 import com.example.candidate_account_uis.R
-import com.example.candidate_account_uis.company.adapters.companyDetailsAdapter
 import com.example.candidate_account_uis.company.entities.companyDetails
 import com.google.firebase.database.FirebaseDatabase
 
@@ -19,15 +18,12 @@ import com.example.candidate_account_uis.databinding.ActivityCompanyDetailFormBi
 
 class CompanyDetailForm : AppCompatActivity() {
 
-
     //authentication
     private lateinit var binding: ActivityCompanyDetailFormBinding
     private lateinit var firebaseAuth: FirebaseAuth
 
     // Initialize Firebase Realtime Database reference
     val myDbRef = FirebaseDatabase.getInstance().getReference("companyDetails")
-    val adapter = companyDetailsAdapter()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +33,6 @@ class CompanyDetailForm : AppCompatActivity() {
 
         //authentication
         firebaseAuth = FirebaseAuth.getInstance()
-
 
         val loginComAcc = findViewById<TextView>(R.id.loginComAcc)
         loginComAcc.setOnClickListener(View.OnClickListener() {
@@ -60,29 +55,41 @@ class CompanyDetailForm : AppCompatActivity() {
 
                 if (password == confirmPassword) {
                     firebaseAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener {
-                            if (it.isSuccessful) {
+                        .addOnCompleteListener { authTask ->
+                            if (authTask.isSuccessful) {
+                                val firebaseUser = authTask.result?.user
+                                if (firebaseUser != null) {
+                                    val myData = companyDetails(
+                                        name = comName,
+                                        contact = comContact,
+                                        email = email,
+                                        description = comDescription
+                                    )
 
-                                val myData = companyDetails(
-                                    name = comName,
-                                    contact = comContact,
-                                    email = email,
-                                    description = comDescription
-                                )
+                                    myDbRef.child(firebaseUser.uid).setValue(myData)
 
-                                myDbRef.push().setValue(myData)
+                                    val intent = Intent(this, ComLogin::class.java)
+                                    intent.putExtra("comName", myData.name)
+                                    intent.putExtra("comContact", myData.contact)
+                                    intent.putExtra("email", myData.email)
+                                    intent.putExtra("comDescription", myData.description)
 
-                                val intent = Intent(this, ComLogin::class.java)
-                                intent.putExtra("comName", myData.name)
-                                intent.putExtra("comContact", myData.contact)
-                                intent.putExtra("email", myData.email)
-                                intent.putExtra("comDescription", myData.description)
+                                    startActivity(intent)
 
-                                startActivity(intent)
-
+                                } else {
+                                    Toast.makeText(
+                                        this,
+                                        authTask.exception.toString(),
+                                        Toast.LENGTH_SHORT
+                                    )
+                                        .show()
+                                }
                             } else {
-                                Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT)
-                                    .show()
+                                Toast.makeText(
+                                    this,
+                                    "Password does not matched",
+                                    Toast.LENGTH_SHORT
+                                ).show()
                             }
                         }
                 } else {
@@ -92,11 +99,16 @@ class CompanyDetailForm : AppCompatActivity() {
                 Toast.makeText(this, "Fields cannot be empty", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+}
+
+
+
 
 //
 //      //normal
 //        addCompany()
-    }
+
 
 //    private fun addCompany(){
 //
@@ -127,4 +139,3 @@ class CompanyDetailForm : AppCompatActivity() {
 
 
 
-}

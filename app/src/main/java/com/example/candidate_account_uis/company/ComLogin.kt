@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.candidateActivities.ResetPasswordActivity
 import com.example.candidate_account_uis.company.entities.companyDetails
+import com.example.candidate_account_uis.companyjobs.InterestedCandidates
 import com.example.candidate_account_uis.databinding.ActivityComLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -48,7 +49,7 @@ class ComLogin : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        val intent = Intent(this@ComLogin, CompanyProfile::class.java)
+                        val intent = Intent(this@ComLogin, InterestedCandidates::class.java)
                         startActivity(intent)
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()

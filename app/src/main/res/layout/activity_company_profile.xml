@@ -28,22 +28,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <TextView
         android:id="@+id/Heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:text="@string/heading"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:text="Good Morning"
         android:textColor="#041051"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/upNav"
-        app:layout_constraintEnd_toEndOf="@+id/upNav"
-        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintEnd_toStartOf="@+id/headingComName"
         app:layout_constraintStart_toStartOf="@+id/upNav"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.506" />
+        app:layout_constraintTop_toTopOf="@+id/upNav" />
 
+    <TextView
+        android:id="@+id/headingComName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="147dp"
+        android:text="TextView"
+        android:textColor="#041051"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/upNav"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Heading"
+        app:layout_constraintTop_toTopOf="@+id/upNav" />
 
     <ImageView
         android:id="@+id/homeIcon"
@@ -69,60 +84,22 @@
         app:layout_constraintStart_toStartOf="@+id/bottomNav"
         app:srcCompat="@drawable/vector" />
 
-    <ImageView
-        android:id="@+id/bellIcon"
-        android:layout_width="24dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="27dp"
-        android:contentDescription="@string/BellIcon"
-        app:layout_constraintBottom_toBottomOf="@+id/upNav"
-        app:layout_constraintStart_toEndOf="@+id/Heading"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.442"
-        app:srcCompat="@drawable/bell" />
-
-
-
-    <ImageView
-        android:id="@+id/settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/settings"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.926"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upNav"
-        app:srcCompat="@drawable/vector11" />
 
 
     <!--    <TextView-->
-<!--        android:id="@+id/profile"-->
-<!--        android:layout_width="200dp"-->
-<!--        android:layout_height="59dp"-->
-<!--        android:layout_marginTop="148dp"-->
-<!--        android:paddingTop="5dp"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:text="@string/profile"-->
-<!--        android:textAlignment="center"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.492"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/upNav"-->
-<!--        tools:ignore="TextSizeCheck" />-->
-
-    <ImageView
-        android:id="@+id/editPencil"
-        android:layout_width="18dp"
-        android:layout_height="16dp"
-        android:layout_marginTop="117dp"
-
-        android:contentDescription="@string/EditPencil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.692"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upNav"
-        app:srcCompat="@drawable/pencil" />
+    <!--        android:id="@+id/profile"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="59dp"-->
+    <!--        android:layout_marginTop="148dp"-->
+    <!--        android:paddingTop="5dp"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:text="@string/profile"-->
+    <!--        android:textAlignment="center"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.492"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/upNav"-->
+    <!--        tools:ignore="TextSizeCheck" />-->
 
     <ImageView
         android:id="@+id/ProfileIcon"
@@ -142,26 +119,159 @@
         android:id="@+id/logoIcon"
         android:layout_width="133dp"
         android:layout_height="110dp"
-        android:layout_marginTop="36dp"
-
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="32dp"
         android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toTopOf="@+id/companyName1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upNav"
         app:srcCompat="@drawable/logobg" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/com_user_profile"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+    <TextView
+        android:id="@+id/companyName1"
+        android:layout_width="304dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/t_comName"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/comNameP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/comDescriptionP"
+        android:layout_width="304dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:elevation="5dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/t_description"
+        app:layout_constraintBottom_toTopOf="@+id/com_contact_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/editPencil"
+        android:layout_width="18dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="104dp"
+        android:contentDescription="@string/EditPencil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNav"
+        app:srcCompat="@drawable/pencil" />
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNav"
+        app:srcCompat="@drawable/vector11" />
+
+    <TextView
+        android:id="@+id/comEmailP"
+        android:layout_width="302dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:elevation="5dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/t_email"
+        app:layout_constraintBottom_toTopOf="@+id/description1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/com_contact_view"
+        android:layout_width="304dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="8dp"
+        android:text="Contact Number"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/comContactP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/comNameP"
+        android:layout_width="302dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:elevation="5dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/t_company"
+        app:layout_constraintBottom_toTopOf="@+id/email3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/comContactP"
+        android:layout_width="302dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rectangle_companyprofile"
+        android:elevation="5dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="0789026789"
         app:layout_constraintBottom_toTopOf="@+id/bottomNav"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoIcon" />
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/description1"
+        android:layout_width="306dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/t_tdescription"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/comDescriptionP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/email3"
+        android:layout_width="304dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/t_emailC"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/comEmailP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
