@@ -9,8 +9,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.candidate_account_uis.databinding.FragmentApplicationFormBinding
 import com.example.candidate_account_uis.databinding.FragmentHomeBinding
+import com.example.candidate_account_uis.firebase.FirestoreClass
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class ApplicationFormFragment : Fragment() {
@@ -61,31 +63,42 @@ class ApplicationFormFragment : Fragment() {
                 progressDialog.setCancelable(false)
                 progressDialog.show()
 
-                database = FirebaseDatabase.getInstance().getReference("CandidateAppication")
+                val db = FirebaseFirestore.getInstance()
+                val collectionUsers = db.collection("users")
+                val nowUser = FirestoreClass().getCurrentUserID()
+                val query = collectionUsers.whereEqualTo("id", nowUser)
 
-                val applicationid = database.push().key!!
+                query.get().addOnSuccessListener { documents ->
+                    if (documents.size() > 0) {
+                        val document = documents.first()
+                        val userid = document.getString("id")
 
-                val applicationData = ApplicationData(applicationid,fullname,cno,nic,email,uni)
+                        database = FirebaseDatabase.getInstance().getReference("CandidateAppication")
 
-                database.child(applicationid).setValue(applicationData).addOnSuccessListener {
+                        val applicationid = database.push().key!!
 
-                    binding.fullName.text.clear()
-                    binding.contactNo.text.clear()
-                    binding.nicNumber.text.clear()
-                    binding.email.text.clear()
-                    binding.university.text.clear()
+                        val applicationData = ApplicationData(userid,applicationid,fullname,cno,nic,email,uni)
 
-                    progressDialog.cancel()
+                        database.child(applicationid).setValue(applicationData).addOnSuccessListener {
 
-                    Toast.makeText(activity,"successfully submitted", Toast.LENGTH_SHORT).show()
+                            binding.fullName.text.clear()
+                            binding.contactNo.text.clear()
+                            binding.nicNumber.text.clear()
+                            binding.email.text.clear()
+                            binding.university.text.clear()
 
-                }.addOnFailureListener {
+                            progressDialog.cancel()
 
-                    progressDialog.cancel()
-                    Toast.makeText(activity,"submission failed", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(activity,"successfully submitted", Toast.LENGTH_SHORT).show()
+
+                        }.addOnFailureListener {
+
+                            progressDialog.cancel()
+                            Toast.makeText(activity,"submission failed", Toast.LENGTH_SHORT).show()
+                        }
+                    }
                 }
             }
-
         }
 
         return binding.root

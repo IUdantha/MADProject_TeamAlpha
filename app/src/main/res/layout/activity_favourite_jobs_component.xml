@@ -15,11 +15,11 @@
     <TextView
         android:id="@+id/job_title"
         android:layout_width="wrap_content"
-        android:layout_height="39.5dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/text_color"
         android:text="gg"
+        android:textColor="@color/text_color"
         android:textSize="21sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,20 +27,34 @@
 
 
     <TextView
+        android:id="@+id/job_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="gg"
+        android:textColor="@color/text_color"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/job_title" />
+
+    <TextView
         android:id="@+id/job_description"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
         android:text="gg"
         android:textColor="@color/text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/remove"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/job_title" />
+        app:layout_constraintTop_toBottomOf="@+id/job_company" />
 
     <Button
-        android:id="@+id/apply"
+        android:id="@+id/Fav_Job_apply"
         android:layout_width="89dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal|center"
@@ -70,7 +84,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/apply"
+        app:layout_constraintEnd_toStartOf="@+id/Fav_Job_apply"
         app:layout_constraintStart_toStartOf="parent" />
 
 
