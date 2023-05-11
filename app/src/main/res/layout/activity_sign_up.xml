@@ -85,7 +85,7 @@
         android:layout_width="368dp"
         android:layout_height="64dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="130dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/btn_box_background"
         android:elevation="5dp"
@@ -96,42 +96,6 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confPassword" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="146dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/btn_box_background_white"
-        android:elevation="5dp"
-        android:fontFamily="@font/inter_medium"
-        android:padding="16dp"
-        android:text="@string/offering_job_btn"
-        android:textAllCaps="false"
-        android:textColor="#757575"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confPassword" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="146dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/btn_box_background_white"
-        android:elevation="5dp"
-        android:fontFamily="@font/inter_medium"
-        android:padding="16dp"
-        android:text="@string/looking_job_btn"
-        android:textAllCaps="false"
-        android:textColor="#757575"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confPassword" />
 
