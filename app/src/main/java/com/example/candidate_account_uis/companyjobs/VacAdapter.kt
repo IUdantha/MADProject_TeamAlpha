@@ -7,6 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.candidate_account_uis.R
 
+
+    //display the added job vacancy with job titile
 class VacAdapter(private val vacList:ArrayList<VacancyModel>) :
     RecyclerView.Adapter<VacAdapter.ViewHolder>(){
 
