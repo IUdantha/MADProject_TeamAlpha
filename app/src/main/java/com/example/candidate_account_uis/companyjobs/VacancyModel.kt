@@ -7,3 +7,4 @@ package com.example.candidate_account_uis.companyjobs
         var companyOverview: String?=null,
         var salary: String?=null
     )
+//used to represent a single vacancy in the application. It has five properties

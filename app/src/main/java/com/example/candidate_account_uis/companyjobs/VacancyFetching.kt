@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.google.firebase.database.R
-
+// fetches and displays a list of vacancies from a Firebase Realtime Database
 class VacancyFetching: AppCompatActivity() {
 
     private lateinit var vacncyRecyclerView: RecyclerView
@@ -21,12 +21,13 @@ class VacancyFetching: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.example.candidate_account_uis.R.layout.activity_added_vacancies)
-
+//RecyclerView object that is used to display the list of vacancies.
         vacncyRecyclerView = findViewById(com.example.candidate_account_uis.R.id.rvVacancy)
         vacncyRecyclerView.layoutManager = LinearLayoutManager(this)
         vacncyRecyclerView.setHasFixedSize(true)
-//        tvLoadingData = findViewById(R.id.tvLoadingData)
 
+//        tvLoadingData = findViewById(R.id.tvLoadingData)
+//an ArrayList of VacancyModel objects that holds the vacancies fetched from the database
         vacList = arrayListOf<VacancyModel>()
 
         getVacanciesData()
@@ -60,7 +61,7 @@ class VacancyFetching: AppCompatActivity() {
                             intent.putExtra("jbRl", vacList[position].jobTitle)
                             intent.putExtra("jobDes", vacList[position].jobDescription)
                             intent.putExtra("comOver", vacList[position].companyOverview)
-                            intent.putExtra("sal", vacList[position].salary)
+
                             startActivity(intent)
 
                         }

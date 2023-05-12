@@ -12,7 +12,7 @@ import com.google.firebase.database.FirebaseDatabase
 //import kotlinx.android.synthetic.main.activity_vacancy_scroll.*
 
 class VacancyAdd : AppCompatActivity() {
-
+    //several private properties, including EditText fields
     private lateinit var jobRole: EditText
     private lateinit var jobDesc: EditText
     private lateinit var companyOver: EditText
@@ -22,12 +22,13 @@ class VacancyAdd : AppCompatActivity() {
 
     private lateinit var dbRef: DatabaseReference
 
-
+    //The onCreate method is called when the activity is created
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+   // sets the content view to a layout file called activity_vacancy_scroll
         setContentView(R.layout.activity_vacancy_scroll)
+   //EditText and Button fields by finding them in the layout file using their resource IDs.
         jobRole = findViewById(R.id.textViewJobRoleFill)
         jobDesc = findViewById(R.id.textViewJobDesFill)
         companyOver = findViewById(R.id.textViewOverViewFill)
@@ -35,8 +36,11 @@ class VacancyAdd : AppCompatActivity() {
         btnSubmitData = findViewById(R.id.submit)
         btnCancelData = findViewById(R.id.button7)
 
+
+        // Initialize Firebase Realtime Database reference
         dbRef = FirebaseDatabase.getInstance().getReference("Vacancies")
 
+        //saveVacancyData method is called when the user clicks the submit button
         btnSubmitData.setOnClickListener {
             saveVacancyData()
         }
@@ -44,7 +48,7 @@ class VacancyAdd : AppCompatActivity() {
     }
 
     private fun saveVacancyData(){
-
+      //  EditText fields and checks that each field has been filled in. If any field is empty, the method displays an error message.
         val jbRl = jobRole.text.toString()
         val jobDes = jobDesc.text.toString()
         val comOver = companyOver.text.toString()
@@ -64,11 +68,12 @@ class VacancyAdd : AppCompatActivity() {
             salary1.error = "Please fill the field"
         }
         else {
-
+     // generates a unique ID for the new vacancy
             val vid = dbRef.push().key!!
-
+     //creates a new VacancyModel object using the entered data, and adds the vacancy to the Firebase Realtime Database
             val vacancy = VacancyModel(vid, jbRl, jobDes, comOver, sal)
 
+           // If the vacancy is added successfully, the method displays a success message
             dbRef.child(vid).setValue(vacancy)
                 .addOnCompleteListener {
                     Toast.makeText(this, "Vacancy added successfully", Toast.LENGTH_LONG).show()

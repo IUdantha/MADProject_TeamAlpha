@@ -54,6 +54,8 @@ class VacancyDetailsActivity: AppCompatActivity() {
         btnDelete = findViewById(R.id.btnDelete)
     }
 
+
+    //sets the values of these elements with the data passed from the previous activity
     private fun setValuesToViews(){
 
         tvVacId.text=intent.getStringExtra("vid")
@@ -61,6 +63,9 @@ class VacancyDetailsActivity: AppCompatActivity() {
         tvJD.text=intent.getStringExtra("jobDes")
         tvOv.text=intent.getStringExtra("comOver")
     }
+
+    // method is called when the delete button is clicked
+    //reference for the vacancy with the given ID and removes it from the database
     private fun deleteRecord(
         id: String
     ) {
@@ -79,6 +84,10 @@ class VacancyDetailsActivity: AppCompatActivity() {
 
     }
 
+
+    //when the update button is clicked. It creates an alert dialog
+    //with a custom layout that allows the user
+
         private fun openUpdateDialog(
         vid: String,
         jbRl: String
@@ -94,6 +103,7 @@ class VacancyDetailsActivity: AppCompatActivity() {
         val etOv = mDialogView.findViewById<EditText>(R.id.etOv)
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
+        // to update the job title, job description, and company overview
         etJbRole.setText(intent.getStringExtra("jbRl").toString())
         etJD.setText(intent.getStringExtra("jobDes").toString())
         etOv.setText(intent.getStringExtra("comOver").toString())
