@@ -1,6 +1,5 @@
 package com.example.candidate_account_uis.candidate
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,10 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.candidate.favjobpage.FavAdapter
 import com.example.candidate_account_uis.candidate.favjobpage.FavJobViewModel
-import com.example.candidate_account_uis.companyjobs.VacAdapter
-import com.example.candidate_account_uis.companyjobs.VacancyDetailsActivity
 import com.example.candidate_account_uis.databinding.FragmentFavouritesBinding
-import com.example.candidate_account_uis.databinding.FragmentJobBinding
 
 private lateinit var viewModel : FavJobViewModel
 private lateinit var favJobRecyclerView: RecyclerView
@@ -56,6 +52,7 @@ class FavouritesFragment : Fragment() {
         adapter = FavAdapter()
         favJobRecyclerView.adapter = adapter
 
+
         viewModel = ViewModelProvider(this).get(FavJobViewModel::class.java)
 
         viewModel.allFavJobs.observe(viewLifecycleOwner, Observer {
@@ -65,5 +62,8 @@ class FavouritesFragment : Fragment() {
 
 
     }
+
+
+
 
 }

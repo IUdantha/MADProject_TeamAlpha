@@ -5,7 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintSet.Layout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.candidate_account_uis.R
 import com.example.candidate_account_uis.candidate.ApplicationFormFragment
@@ -31,6 +33,7 @@ class FavAdapter() : RecyclerView.Adapter<FavAdapter.FavViewHolder>() {
         holder.title.text = currentitem.title
         holder.company.text = currentitem.company
         holder.description.text = currentitem.description
+        val jobid = currentitem.id
 
         holder.applybutton.setOnClickListener(object :View.OnClickListener{
 
@@ -40,9 +43,13 @@ class FavAdapter() : RecyclerView.Adapter<FavAdapter.FavViewHolder>() {
 
                 activity.supportFragmentManager.beginTransaction().replace(R.id.frame_layout,applicationFormFragment).commit()
             }
-
         })
 
+        holder.removebutton.setOnClickListener ( object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                deleteRecord(jobid.toString())
+            }
+        })
     }
 
     override fun getItemCount(): Int {
@@ -66,20 +73,14 @@ class FavAdapter() : RecyclerView.Adapter<FavAdapter.FavViewHolder>() {
         val description : TextView = itemView.findViewById(R.id.job_description)
 
         val applybutton : Button = itemView.findViewById(R.id.Fav_Job_apply)
+        val removebutton : Button = itemView.findViewById(R.id.Fav_Job_remove)
 
-        init {
-            applybutton.setOnClickListener{
-                //deleteRecord()
-
-            }
-        }
-
-
+        val gg : View? = itemView.findViewById(R.id.frame_layout)
 
     }
 
-    private fun deleteRecord(name1 :String) {
-        val dbRef = FirebaseDatabase.getInstance().getReference("jobs").child(name1)
+    fun deleteRecord(id:String) {
+        val dbRef = FirebaseDatabase.getInstance().getReference("jobs").child(id)
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {

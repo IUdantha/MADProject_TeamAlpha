@@ -22,7 +22,7 @@ class ApplicationFormFragment : Fragment() {
     private val binding get() = _binding!!
 //--------
 
-    private lateinit var database : DatabaseReference
+    private lateinit var database: DatabaseReference
 
 
     override fun onCreateView(
@@ -30,10 +30,10 @@ class ApplicationFormFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         //-----
-        _binding = FragmentApplicationFormBinding.inflate(inflater,container,false)
+        _binding = FragmentApplicationFormBinding.inflate(inflater, container, false)
         //-----
 
-        binding.applicationConfirm.setOnClickListener{
+        binding.applicationConfirm.setOnClickListener {
 
             val fullname = binding.fullName.text.toString()
             val cno = binding.contactNo.text.toString()
@@ -47,58 +47,75 @@ class ApplicationFormFragment : Fragment() {
             if (cno.isEmpty()) {
                 binding.contactNo.error = "Please enter your contact No"
             }
+//            if (!isValidPhoneNumber(cno)) {
+//                binding.contactNo.error = "Please enter valid contact No"
+//            }
             if (nic.isEmpty()) {
                 binding.nicNumber.error = "Please enter your NIC No"
             }
             if (email.isEmpty()) {
                 binding.email.error = "Please enter your email"
             }
+//            if (!isValidEmail(email)) {
+//                binding.email.error = "Please enter a valid email"
+//            }
             if (uni.isEmpty()) {
                 binding.university.error = "Please enter your university"
-            }
-            else{
+            } else {
+                if (isValidEmail(email)) {
 
-                val progressDialog = ProgressDialog(activity)
-                progressDialog.setMessage("Submitting ....")
-                progressDialog.setCancelable(false)
-                progressDialog.show()
+                    if (isValidPhoneNumber(cno)) {
 
-                val db = FirebaseFirestore.getInstance()
-                val collectionUsers = db.collection("users")
-                val nowUser = FirestoreClass().getCurrentUserID()
-                val query = collectionUsers.whereEqualTo("id", nowUser)
+                        val progressDialog = ProgressDialog(activity)
+                        progressDialog.setMessage("Submitting ....")
+                        progressDialog.setCancelable(false)
+                        progressDialog.show()
 
-                query.get().addOnSuccessListener { documents ->
-                    if (documents.size() > 0) {
-                        val document = documents.first()
-                        val userid = document.getString("id")
-                        val imagepath = document.getString("image")
+                        val db = FirebaseFirestore.getInstance()
+                        val collectionUsers = db.collection("users")
+                        val nowUser = FirestoreClass().getCurrentUserID()
+                        val query = collectionUsers.whereEqualTo("id", nowUser)
+
+                        query.get().addOnSuccessListener { documents ->
+                            if (documents.size() > 0) {
+                                val document = documents.first()
+                                val userid = document.getString("id")
+                                val imagepath = document.getString("image")
 
 
-                        database = FirebaseDatabase.getInstance().getReference("CandidateAppication")
+                                database = FirebaseDatabase.getInstance()
+                                    .getReference("CandidateAppication")
 
-                        val applicationid = database.push().key!!
+                                val applicationid = database.push().key!!
 
-                        val applicationData = ApplicationData(userid,applicationid,fullname,cno,nic,email,uni,imagepath)
+                                val applicationData = ApplicationData(userid, applicationid, fullname, cno, nic, email, uni, imagepath)
 
-                        database.child(applicationid).setValue(applicationData).addOnSuccessListener {
+                                database.child(applicationid).setValue(applicationData)
+                                    .addOnSuccessListener {
 
-                            binding.fullName.text.clear()
-                            binding.contactNo.text.clear()
-                            binding.nicNumber.text.clear()
-                            binding.email.text.clear()
-                            binding.university.text.clear()
+                                        binding.fullName.text.clear()
+                                        binding.contactNo.text.clear()
+                                        binding.nicNumber.text.clear()
+                                        binding.email.text.clear()
+                                        binding.university.text.clear()
 
-                            progressDialog.cancel()
+                                        progressDialog.cancel()
 
-                            Toast.makeText(activity,"successfully submitted", Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(activity, "successfully submitted", Toast.LENGTH_SHORT).show()
 
-                        }.addOnFailureListener {
+                                    }.addOnFailureListener {
 
-                            progressDialog.cancel()
-                            Toast.makeText(activity,"submission failed", Toast.LENGTH_SHORT).show()
-                        }
+                                        progressDialog.cancel()
+                                        Toast.makeText(activity, "submission failed", Toast.LENGTH_SHORT).show()
+                                    }
+                            }
+}
+
+                    } else {
+                        binding.contactNo.error = "Please enter valid contact No"
                     }
+                } else {
+                    binding.email.error = "Please enter a valid email"
                 }
             }
         }
@@ -106,5 +123,20 @@ class ApplicationFormFragment : Fragment() {
         return binding.root
     }
 
-
 }
+
+fun isValidEmail(email: String): Boolean {
+    val emailRegex = Regex("^\\S+@\\S+\\.\\S+\$")
+    return emailRegex.matches(email)
+}
+
+fun isValidPhoneNumber(phoneNum: String): Boolean {
+    val phoneNumRegex = Regex("^\\d{10}\$")
+    return phoneNumRegex.matches(phoneNum)
+}
+
+
+
+
+
+
