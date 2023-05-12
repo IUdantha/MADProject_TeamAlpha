@@ -47,7 +47,7 @@ class MainActivity_sarindu : BaseActivity(), communicator, NavigationView.OnNavi
 
             when(it.itemId){
                 R.id.home -> replaceFragment(HomeFragment())
-                R.id.jobs -> replaceFragment(JobFragment())
+                //R.id.jobs -> replaceFragment(JobFragment())
                 R.id.favourites -> replaceFragment(FavouritesFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
 

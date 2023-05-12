@@ -100,13 +100,12 @@ class ApplicationFormFragment : Fragment() {
                                         binding.university.text.clear()
 
                                         progressDialog.cancel()
-
                                         Toast.makeText(activity, "successfully submitted", Toast.LENGTH_SHORT).show()
 
                                     }.addOnFailureListener {
-
                                         progressDialog.cancel()
                                         Toast.makeText(activity, "submission failed", Toast.LENGTH_SHORT).show()
+
                                     }
                             }
 }

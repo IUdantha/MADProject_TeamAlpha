@@ -4,9 +4,9 @@
     <item android:title="Home"
         android:icon="@drawable/baseline_home_24"
         android:id="@+id/home" />
-    <item android:title="Jobs"
-        android:icon="@drawable/baseline_text_snippet_24"
-        android:id="@+id/jobs"/>
+<!--    <item android:title="Jobs"-->
+<!--        android:icon="@drawable/baseline_text_snippet_24"-->
+<!--        android:id="@+id/jobs"/>-->
     <item android:title="Favourites"
         android:icon="@drawable/baseline_favorite_24"
         android:id="@+id/favourites"/>

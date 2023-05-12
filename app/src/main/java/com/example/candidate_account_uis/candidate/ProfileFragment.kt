@@ -92,8 +92,6 @@ class ProfileFragment : Fragment() {
 
         return binding.root
 
-
-
     }
 
     private fun readData() {
@@ -137,11 +135,13 @@ class ProfileFragment : Fragment() {
                 progressDialog.cancel()
 
             } else {
+                progressDialog.cancel()
                 Toast.makeText(activity, "User doesn't exist", Toast.LENGTH_SHORT).show()
+
             }
         }.addOnFailureListener { exception ->
+            progressDialog.cancel()
             Toast.makeText(activity, "Documents getting failed", Toast.LENGTH_SHORT).show()
-
         }
 
         //--------------------

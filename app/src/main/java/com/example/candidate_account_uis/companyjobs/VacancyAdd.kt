@@ -26,8 +26,8 @@ class VacancyAdd : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_vacancy_scroll)
 
+        setContentView(R.layout.activity_vacancy_scroll)
         jobRole = findViewById(R.id.textViewJobRoleFill)
         jobDesc = findViewById(R.id.textViewJobDesFill)
         companyOver = findViewById(R.id.textViewOverViewFill)
