@@ -20,6 +20,7 @@ import com.example.candidate_account_uis.company.CompanyInterviewActivity
 class interestedCandidatesAdapter:RecyclerView.Adapter<interestedCandidatesAdapter.ViewHolder>() {
 
     lateinit var data: List<ApplicationData>
+    private var filteredData: List<ApplicationData> = emptyList()
     lateinit var context: Context
 
 
@@ -45,6 +46,7 @@ class interestedCandidatesAdapter:RecyclerView.Adapter<interestedCandidatesAdapt
 
     fun setData(data: List<ApplicationData>, context: Context) {
         this.data = data
+        this.filteredData = data
         this.context = context
         notifyDataSetChanged()
     }
@@ -71,6 +73,24 @@ class interestedCandidatesAdapter:RecyclerView.Adapter<interestedCandidatesAdapt
         return if(::data.isInitialized) data.size else 0
     }
 
+    fun getData(data: List<ApplicationData>, context: Context) {
+        this.data = data
+        return
+    }
+
+    fun filter(query: String) {
+        filteredData = if (query.isEmpty()) {
+            data
+        } else {
+            data.filter {
+                it.fullname!!.contains(query, ignoreCase = true) ||
+                        it.email!!.contains(query, ignoreCase = true) ||
+                        it.contactnumber!!.contains(query, ignoreCase = true) ||
+                        it.university!!.contains(query, ignoreCase = true)
+            }
+        }
+        notifyDataSetChanged()
+    }
 }
 
 
